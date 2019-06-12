@@ -28,7 +28,7 @@
 		<property name="dataSource" ref="dataSource"/>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.VO.RegVO</value><!--vo file destination-->
+				<!-- <value>com.VO.RegVO</value> --><!--vo file destination-->
 			</list>
 		</property>
 		
