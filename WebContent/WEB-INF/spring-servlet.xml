@@ -18,7 +18,7 @@
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://localhost/Alexa"/>
+		<property name="url" value="jdbc:mysql://localhost/alexa"/>
 		<property name="username" value="root"/>
 		<property name="password" value="root"/>
 	</bean>
@@ -28,7 +28,8 @@
 		<property name="dataSource" ref="dataSource"/>
 		<property name="annotatedClasses">
 			<list>
-				<!-- <value>com.VO.RegVO</value> --><!--vo file destination-->
+				<!-- <value>com.VO.RegVO</value>vo file destination -->
+				<value>com.VO.LoanTypeVO</value><!--vo file destination-->
 			</list>
 		</property>
 		
@@ -41,5 +42,6 @@
 		</property>
 	
 	</bean>
+
 	
 </beans>

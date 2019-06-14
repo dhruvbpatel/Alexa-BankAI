@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class loadController {
 
-	@RequestMapping(value="/")
+	@RequestMapping(value="")
 	public ModelAndView index(){
 		return new ModelAndView("admin/index");
 	}
