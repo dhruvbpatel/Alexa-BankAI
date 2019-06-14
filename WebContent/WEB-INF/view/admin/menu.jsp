@@ -54,14 +54,12 @@
               </a>
               <div class="collapse" id="page-layouts">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="addLoanStaff.jsp">Add Loan Staff</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/layout/rtl-layout.html">View Loan Staff</a></li>
+                  <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="loadLoanStaff">Add Loan Staff</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="loadLoanStaff">View Loan Staff</a></li>
              <!--      <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="pages/layout/horizontal-menu.html">Horizontal Menu</a></li> -->
                 </ul>
               </div>
             </li>
-
-
 
             <li class="nav-item d-none d-lg-block">
               <a class="nav-link" data-toggle="collapse" href="#sidebar-layouts" aria-expanded="false" aria-controls="sidebar-layouts">
