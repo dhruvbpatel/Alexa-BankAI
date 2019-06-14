@@ -85,8 +85,8 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="<%=request.getContextPath()%>/LoanRateController?flag=loadLoanRate">Add loan Rate </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="<%=request.getContextPath()%>/LoanRateController?flag=viewLoanRate">View loan Rate</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="loadLoanRate">Add loan Rate </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="viewLoanRate">View loan Rate</a></li>
                   <!-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/badges.html">Badges</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/ui-features/breadcrumbs.html">Breadcrumbs</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>

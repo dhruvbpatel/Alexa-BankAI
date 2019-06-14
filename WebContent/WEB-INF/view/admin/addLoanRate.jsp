@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c"  uri="http://java.sun.com/jstl/core_rt"%>
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
     <!DOCTYPE html>
 <html lang="en">
 
@@ -221,7 +222,8 @@
               <div class="card"	>
                 <div class="card-body">
                   <h4 class="card-title">Add Loan Rate</h4>
-                  <form class="cmxform" id="commentForm" method="post" action="<%=request.getContextPath()%>/LoanRateController">
+                 <%--  <form class="cmxform" id="commentForm" method="post" action="insertLoanRate"> --%>
+                  <f:form action="insertLoanRate" method="post" modelAttribute="loanRateVO">
                     <fieldset>
                       <div class="form-group">
                         <label for="cname">Loan Type</label>
@@ -233,16 +235,17 @@
                        
                        </select> -->
                        
-					 <select name="loanType" class="form-control">
-							<c:forEach items="${sessionScope.loanTypeList}" var="i">
+					 <f:select path="cid.id">
+							<c:forEach items="${loanTypeList}" var="i">
 								<option value="${i.id}" >${i.loanType}</option>
 							</c:forEach> 
-						</select>
+						</f:select>
                        
                       </div>
                       <div class="form-group">
                         <label for="cemail">Loan Rate</label>
-                        <input id="loanRate" class="form-control" type="number" placeholder="Enter Loan Rate" name="loanRate" required>
+                        <f:input  path="loanRate" class="form-control" type="number" placeholder="Enter Loan Rate" />
+                        
                       </div>
                       
                         
@@ -258,7 +261,8 @@
                        <%-- <input type="hidden" name="id" value="${i.id}"> --%>
                        <input type="hidden" name="flag" value="addLoanRate" >
                     </fieldset>
-                  </form>
+                    </f:form>
+                  <%-- </form> --%>
                 </div>
               </div>
             </div>

@@ -38,7 +38,7 @@ public class LoanTypeController {
 	@RequestMapping(value="viewLoanType",method=RequestMethod.GET)
 	public ModelAndView viewLoanType(@ModelAttribute LoanTypeVO loanTypeVO){
 		
-		List ls = loanTypeDAO.search(loanTypeVO);
+		List ls = loanTypeDAO.search();
 		return new ModelAndView("admin/viewLoanType","loanTypeList",ls);
 	}
 

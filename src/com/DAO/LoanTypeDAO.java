@@ -31,7 +31,7 @@ public class LoanTypeDAO {
 	}
 	
 
-	public List search(LoanTypeVO loanTypeVO)
+	public List search()
 	{
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
