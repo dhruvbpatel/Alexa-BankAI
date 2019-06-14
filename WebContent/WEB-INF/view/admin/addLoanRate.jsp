@@ -1,13 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jstl/core_rt"%>
     <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-
-<script src="adminResources/js/formValidations.js"></script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +24,6 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="adminResources/css/style.css">
   <!-- endinject -->
-  
   <link rel="shortcut icon" href="adminResources/images/favicon.png" />
 </head>
 
@@ -218,43 +214,91 @@
         <div class="content-wrapper">
           <div class="row grid-margin">
             <div class="col-12">
-              <div class="card">
-                
-              </div>
-            </div>
+                        </div>
           </div>
           <div class="row grid-margin">
             <div class="col-lg-12">
-              <div class="card">
+              <div class="card"	>
                 <div class="card-body">
-                  <h4 class="card-title">Add Loan type</h4>
-                  <f:form class="cmxform" id="commentForm" name="loanTypeForm" method="post" action="insertLoanType" onsubmit="return validateForm()" modelAttribute="LoanTypeVO">
-                    <fieldset>	
+                  <h4 class="card-title">Add Loan Rate</h4>
+                  <form class="cmxform" id="commentForm" method="post" action="<%=request.getContextPath()%>/LoanRateController">
+                    <fieldset>
                       <div class="form-group">
-                        <label for="cname">Loan type</label>
-                        <f:input id="loanType" class="form-control" path="loanType"  type="text" placeholder="Enter Loan Type"/>
-                      </div>
-                        
-                        <div class="form-group">
-                        <label for="ccomment">Loan description</label>
-                        <f:textarea id="loanDescription" rows="4"  class="form-control" path="loanTypeDescription" placeholder="Enter Loan Description"/>
-                      </div>
-                      <f:hidden path="id"/>
-                      <input class="btn btn-primary" type="submit"  value="Submit"> 
-                       <input class="btn btn-primary" type="reset" value="reset">
+                        <label for="cname">Loan Type</label>
+                       <!--  <input id="cname" class="form-control" name="name" minlength="2" type="text" required> -->
+                      <!--  <select  name="loanType" class="form-control">
                        
-                      </fieldset>
+                       <option value="carLoan" >Select Loan Type</option>
+                       
+                       
+                       </select> -->
+                       
+					 <select name="loanType" class="form-control">
+							<c:forEach items="${sessionScope.loanTypeList}" var="i">
+								<option value="${i.id}" >${i.loanType}</option>
+							</c:forEach> 
+						</select>
+                       
                       </div>
-                  </f:form>
+                      <div class="form-group">
+                        <label for="cemail">Loan Rate</label>
+                        <input id="loanRate" class="form-control" type="number" placeholder="Enter Loan Rate" name="loanRate" required>
+                      </div>
+                      
+                        
+                                            
+                      
+                      <div class="form-group">
+                        <label for="ccomment">Loan Rate Description (required)</label>
+                    
+                      <textarea id="maxlength-textarea" name="loanRateDescription" class="form-control" maxlength="100" rows="5" placeholder="Enter the Description of the Loan"></textarea>
+                      </div>
+                      <input class="btn btn-primary" type="submit" value="Submit">
+                       <input class="btn btn-primary" type="reset" value="Reset">
+                       <%-- <input type="hidden" name="id" value="${i.id}"> --%>
+                       <input type="hidden" name="flag" value="addLoanRate" >
+                    </fieldset>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-12">
-              <div class="card">
-               
-              </div>
+            <!--   <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Complete form validation</h4>
+                  <form class="cmxform" id="signupForm" method="get" action="#">
+                    <fieldset>
+                      <div class="form-group">
+                        <label for="firstname">Firstname</label>
+                        <input id="firstname" class="form-control" name="firstname" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label for="lastname">Lastname</label>
+                        <input id="lastname" class="form-control" name="lastname" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label for="username">Username</label>
+                        <input id="username" class="form-control" name="username" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" class="form-control" name="password" type="password">
+                      </div>
+                      <div class="form-group">
+                        <label for="confirm_password">Confirm password</label>
+                        <input id="confirm_password" class="form-control" name="confirm_password" type="password">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" class="form-control" name="email" type="email">
+                      </div>
+                      <input class="btn btn-primary" type="submit" value="Submit">
+                    </fieldset>
+                  </form>
+                </div>
+              </div> -->
             </div>
           </div>
 					<!-- partial:../../partials/_footer.html -->
@@ -284,11 +328,9 @@
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="adminResources/js/form-validation.js"></script>
-  <script src="adminResources/js/formValidations.js"></script>
   <script src="adminResources/js/bt-maxLength.js"></script>
   <!-- End custom js for this page-->
 </body>
 
 </html>
-    
     

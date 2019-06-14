@@ -1,40 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
-    <!DOCTYPE html>
+ <%@ taglib prefix="c"  uri="http://java.sun.com/jstl/core_rt"%>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-
-<script src="adminResources/js/formValidations.js"></script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Victory Admin</title>
   <!-- plugins:css -->
-  <!-- <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
-  <link rel="stylesheet" href="../../vendors/flag-icon-css/css/flag-icon.min.css">
-  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css"> -->
   <link rel="stylesheet" href="adminResources/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="adminResources/css/simple-line-icons.css">
+  
   <link rel="stylesheet" href="adminResources/css/flag-icon.min.css">
   <link rel="stylesheet" href="adminResources/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
+  <link rel="stylesheet" href="adminResources/css/dataTables.bootstrap4.css" />
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="adminResources/css/style.css">
   <!-- endinject -->
-  
   <link rel="shortcut icon" href="adminResources/images/favicon.png" />
 </head>
 
 <body>
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
-    
     <jsp:include page="header.jsp"></jsp:include>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
@@ -211,54 +204,54 @@
         </div>
         <!-- partial -->
         <!-- partial:../../partials/_sidebar.html -->
-        
         <jsp:include page="menu.jsp"></jsp:include>
-        
         <!-- partial -->
         <div class="content-wrapper">
-          <div class="row grid-margin">
-            <div class="col-12">
-              <div class="card">
-                
-              </div>
-            </div>
-          </div>
-          <div class="row grid-margin">
-            <div class="col-lg-12">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Add Loan type</h4>
-                  <f:form class="cmxform" id="commentForm" name="loanTypeForm" method="post" action="insertLoanType" onsubmit="return validateForm()" modelAttribute="LoanTypeVO">
-                    <fieldset>	
-                      <div class="form-group">
-                        <label for="cname">Loan type</label>
-                        <f:input id="loanType" class="form-control" path="loanType"  type="text" placeholder="Enter Loan Type"/>
-                      </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Loan Type Table</h4>
+              <div class="row">
+                <div class="col-12">
+                  <div class="table-responsive">
+                    
+                    <table id="order-listing" class="table">
+                      <thead>
+                        <tr>
+                            <th>Serial #</th>
+                            <th>Loan Type</th>
+                            <th>Loan Description</th>
+                            <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      
+                      <c:forEach items="${loanTypeList}" var="i" varStatus="j">
+							<tr>
+								<td>${j.count}</td>
+								<td>${i.loanType}</td>
+								<td>${i.loanTypeDescription}</td>
+							 	<td>	
+                              		<button class="btn btn-outline-primary">
+                              			<a href="editLoanType?id=${i.id}">Edit</a>
+                              		</button>
+                               		<button class="btn btn-outline-primary">
+                               			<a href="deleteLoanType?id=${i.id}">Delete</a>
+                               		</button>
+                            	</td>
+							</tr>
+					</c:forEach>
+                         
                         
-                        <div class="form-group">
-                        <label for="ccomment">Loan description</label>
-                        <f:textarea id="loanDescription" rows="4"  class="form-control" path="loanTypeDescription" placeholder="Enter Loan Description"/>
-                      </div>
-                      <f:hidden path="id"/>
-                      <input class="btn btn-primary" type="submit"  value="Submit"> 
-                       <input class="btn btn-primary" type="reset" value="reset">
-                       
-                      </fieldset>
-                      </div>
-                  </f:form>
+                
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="card">
-               
-              </div>
-            </div>
-          </div>
 					<!-- partial:../../partials/_footer.html -->
-				<jsp:include page="footer.jsp"></jsp:include>
+					<jsp:include page="footer.jsp"></jsp:include>
 					<!-- partial -->
         </div>
         <!-- content-wrapper ends -->
@@ -271,9 +264,9 @@
   <!-- plugins:js -->
   <script src="adminResources/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
-  <!-- Plugin js for this page-->
-  <script src="adminResources/js/jquery.validate.min.js"></script>
-  <script src="adminResources/js/bootstrap-maxlength.min.js"></script>
+  <!-- Plugin js for this <page--></page-->
+  <script src="adminResources/js/jquery.dataTables.js"></script>
+  <script src="adminResources/js/dataTables.bootstrap4.js"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="adminResources/js/off-canvas.js"></script>
@@ -283,12 +276,8 @@
   <script src="adminResources/js/todolist.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="adminResources/js/form-validation.js"></script>
-  <script src="adminResources/js/formValidations.js"></script>
-  <script src="adminResources/js/bt-maxLength.js"></script>
+  <script src="adminResources/js/data-table.js"></script>
   <!-- End custom js for this page-->
 </body>
 
 </html>
-    
-    

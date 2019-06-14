@@ -70,7 +70,7 @@
               <div class="collapse" id="sidebar-layouts">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item"> <a class="nav-link" href="loadLoanType">Add loan </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="<%=request.getContextPath()%>/LoanTypeController?flag=viewLoanType">View loan</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="viewLoanType">View loan</a></li>
                  <!--  <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden.html">Sidebar Hidden</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">Sidebar Overlay</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-fixed.html">Sidebar Fixed</a></li> -->
