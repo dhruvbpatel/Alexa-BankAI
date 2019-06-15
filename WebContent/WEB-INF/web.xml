@@ -12,7 +12,7 @@
 
 	<servlet-mapping>
 		<servlet-name>spring</servlet-name><!--servlet name should be same as above-->
-		<url-pattern></url-pattern><!--we can add mutliple url pattern-->
+		<url-pattern>/</url-pattern><!--we can add mutliple url pattern-->
 	</servlet-mapping>
 
 </web-app>

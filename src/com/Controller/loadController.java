@@ -10,6 +10,8 @@ public class loadController {
 	@RequestMapping(value="")
 	public ModelAndView index(){
 		return new ModelAndView("admin/index");
+		
+		
 	}
 	
 		

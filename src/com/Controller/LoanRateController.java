@@ -30,9 +30,9 @@ public class LoanRateController {
 	public ModelAndView loadLoanRate()
 	{
 		
-		List ls =loanTypeDAO.search();
+		List loanTypeList =loanTypeDAO.search();
 		
-		return new ModelAndView("admin/addLoanRate","loanTypeList",ls).addObject("loanRateVO",new LoanRateVO());
+		return new ModelAndView("admin/addLoanRate","loanTypeList",loanTypeList).addObject("loanRateVO",new LoanRateVO());
 		
 	}
 	
@@ -42,35 +42,42 @@ public class LoanRateController {
 		this.loanRateDAO.insert(loanRateVO);
 		return new ModelAndView("redirect:/loadLoanRate");
 		
-		
 	}
 	
-//	
-//	@RequestMapping(value="viewLoanType",method=RequestMethod.GET)
-//	public ModelAndView viewLoanType(@ModelAttribute LoanTypeVO loanTypeVO){
-//		
-//		List ls = loanTypeDAO.search(loanTypeVO);
-//		return new ModelAndView("admin/viewLoanType","loanTypeList",ls);
-//	}
-//
-//	@RequestMapping(value="deleteLoanType",method=RequestMethod.GET)
-//	public ModelAndView deleteLoanType(@RequestParam int id,@ModelAttribute LoanTypeVO loanTypeVO){
-//		
-//		loanTypeVO.setId(id);
-//		loanTypeDAO.delete(loanTypeVO);
-//		
-//		
-//	return new ModelAndView("redirect:/viewLoanType");	
-//	}
-//	
-//	
-//	@RequestMapping(value="editLoanType",method=RequestMethod.GET)
-//	public ModelAndView editLoanType(@RequestParam int id,@ModelAttribute LoanTypeVO loanTypeVO){
-//		loanTypeVO.setId(id);
-//		List ls  = loanTypeDAO.edit(loanTypeVO);
-//		return new ModelAndView("admin/addLoanType","LoanTypeVO",ls.get(0));
-//	}
-//	
+	
+	@RequestMapping(value="viewLoanRate",method=RequestMethod.GET)
+	public ModelAndView viewLoanType(@ModelAttribute LoanRateVO loanRateVO){
+		
+		List ls = loanRateDAO.search();
+		return new ModelAndView("admin/viewLoanRate","loanRateList",ls);
+	}
+
+	@RequestMapping(value="deleteLoanRate",method=RequestMethod.GET)
+	public ModelAndView deleteLoanType(@RequestParam int id,@ModelAttribute LoanRateVO loanRateVO){
+		
+		loanRateVO.setId(id);
+		loanRateDAO.delete(loanRateVO);
+			
+	return new ModelAndView("redirect:/viewLoanRate");	
+	}
+	
+	
+	@RequestMapping(value="editLoanRate",method=RequestMethod.GET)
+	public ModelAndView editLoanRate(@RequestParam int id,@ModelAttribute LoanRateVO loanRateVO){
+		loanRateVO.setId(id);
+		
+		List loanRateList  = loanRateDAO.edit(loanRateVO);
+		
+		List loanTypeList = loanTypeDAO.search();
+		LoanRateVO loanRateVO2 = (LoanRateVO)loanRateList.get(0);
+		
+		System.out.println(loanRateVO2.getLoanRate());
+		System.out.println(loanRateVO2.getLoanRateDescription());
+		System.out.println(loanRateVO2.getCid().getLoanType());
+		
+		return new ModelAndView("admin/addLoanRate","loanRateVO",(LoanRateVO)loanRateList.get(0)).addObject("loanTypeList",loanTypeList);
+	}
+	
 	
 	
 }

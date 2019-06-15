@@ -224,19 +224,20 @@
                         </tr>
                       </thead>
                       <tbody>
-                      <c:forEach items="${sessionScope.list}" var="i" varStatus="j">
+                      <c:forEach items="${loanRateList}" var="i" varStatus="j">
 							<tr>
 								<td>${j.count}</td>
+															
+								<td>${i.loanRate}</td>
 								
-								<td>${i.loanType.loanType}</td>
-								<td>${i.loanRate }</td>
 								<td>${i.loanRateDescription}</td>
+								<td>${i.cid.loanType}</td>
 							 	<td>	
                               		<button class="btn btn-outline-primary">
-                              			<a href="<%=request.getContextPath()%>/LoanRateController?flag=editLoanRate&id=${i.id}">Edit</a>
+                              			<a href="editLoanRate?id=${i.id}">Edit</a>
                               		</button>
                                		<button class="btn btn-outline-primary">
-                               			<a href="<%=request.getContextPath()%>/LoanRateController?flag=deleteLoanRate&id=${i.id}">Delete</a>
+                               			<a href="deleteLoanRate?id=${i.id}">Delete</a>
                                		</button>
                             	</td>
 							</tr>

@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.VO.LoanRateVO;
-import com.VO.LoanTypeVO;
+import com.VO.LoanRateVO;
 
 @Repository
 public class LoanRateDAO {
@@ -32,42 +32,47 @@ public class LoanRateDAO {
 	}
 	
 
-//	public List search(LoanTypeVO loanTypeVO)
-//	{
-//		Session Session = sessionfactory.openSession();
-//		Transaction transaction = Session.beginTransaction();
-//			
-//		Query q = Session.createQuery("from LoanTypeVO");
-//		
-//		List ls = q.list();
-//	transaction.commit();
-//		return ls;
-//	}
+	public List search()
+	{
+		Session Session = sessionfactory.openSession();
+		Transaction transaction = Session.beginTransaction();
+			
+		Query q = Session.createQuery("from LoanRateVO");
+		
+		List ls = q.list();
+	transaction.commit();
+		return ls;
+	}
 //	
-//	public void delete(LoanTypeVO loanTypeVO){
-//		Session Session = sessionfactory.openSession();
-//		Transaction transaction = Session.beginTransaction();
-//			
-//		Session.delete(loanTypeVO);
-//		
-//		transaction.commit();
-//		Session.close();
-//	}
-//
-//
-//	public List edit(LoanTypeVO loanTypeVO) {
-//		Session Session = sessionfactory.openSession();
-//		Transaction transaction = Session.beginTransaction();
-//			
-//		Query q = Session.createQuery("from LoanTypeVO where id = " + loanTypeVO.getId());
-//		
-//		List ls = q.list();
-//	transaction.commit();
-//		return ls;
-//	}
-//	
-//	
+	public void delete(LoanRateVO loanRateVO){
+		Session Session = sessionfactory.openSession();
+		Transaction transaction = Session.beginTransaction();
+			
+		Session.delete(loanRateVO);
+		
+		transaction.commit();
+		Session.close();
+	}
+
+
+	public List edit(LoanRateVO loanRateVO) {
+		Session Session = sessionfactory.openSession();
+		Transaction transaction = Session.beginTransaction();
+			
+		Query q = Session.createQuery("from LoanRateVO where id = " + loanRateVO.getId());
+		
+		List ls = q.list();
+	transaction.commit();
+		
+	System.out.println(ls.size());
+		return ls;
+		
+		
+	}
 	
+	
+
+
 }
 
 
