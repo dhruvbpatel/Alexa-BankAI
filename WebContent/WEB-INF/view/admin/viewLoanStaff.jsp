@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c"  uri="http://java.sun.com/jstl/core_rt"%>
-<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
-    <!DOCTYPE html>
+ <%@ taglib prefix="c"  uri="http://java.sun.com/jstl/core_rt"%>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,16 +10,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Victory Admin</title>
   <!-- plugins:css -->
-  <!-- <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
-  <link rel="stylesheet" href="../../vendors/flag-icon-css/css/flag-icon.min.css">
-  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css"> -->
   <link rel="stylesheet" href="adminResources/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="adminResources/css/simple-line-icons.css">
+  
   <link rel="stylesheet" href="adminResources/css/flag-icon.min.css">
   <link rel="stylesheet" href="adminResources/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
+  <link rel="stylesheet" href="adminResources/css/dataTables.bootstrap4.css" />
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="adminResources/css/style.css">
@@ -31,7 +28,6 @@
 <body>
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
-    
     <jsp:include page="header.jsp"></jsp:include>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
@@ -208,104 +204,70 @@
         </div>
         <!-- partial -->
         <!-- partial:../../partials/_sidebar.html -->
-        
         <jsp:include page="menu.jsp"></jsp:include>
-        
         <!-- partial -->
         <div class="content-wrapper">
-          <div class="row grid-margin">
-            <div class="col-12">
-                        </div>
-          </div>
-          <div class="row grid-margin">
-            <div class="col-lg-12">
-              <div class="card"	>
-                <div class="card-body">
-                  <h4 class="card-title">Add Loan Rate</h4>
-                 <%--  <form class="cmxform" id="commentForm" method="post" action="insertLoanRate.html"> --%>
-									<f:form action="insertLoanRate.html" method="post" modelAttribute="LoanRateVO">
-										<fieldset>
-											
-											<div class="form-group">
-											
-												<label for="cname">Loan Type</label>
-
-												<f:select path="loanTypeId.id" class="form-control">
-													<c:forEach items="${loanTypeList}" var="i">
-														<option value="${i.id}">${i.loanType}</option>
-													</c:forEach>
-												</f:select>
-
-											</div>
-											<div class="form-group">
-												<label for="cemail">Loan Rate</label>
-												<f:input path="loanRate" class="form-control" type="number"
-													placeholder="Enter Loan Rate" />
-
-											</div>
-
-
-
-
-											<div class="form-group">
-												<label for="ccomment">Loan Rate Description</label>
-
-												<f:textarea id="maxlength-textarea"
-													path="loanRateDescription" class="form-control"
-													maxlength="100" rows="5"
-													placeholder="Enter the Description of the Loan" />
-											</div>
-											<f:hidden path="id"/>
-											<input class="btn btn-primary" type="submit" value="Submit">
-											<input class="btn btn-primary" type="reset" value="Reset">
-											
-										</fieldset>
-									</f:form>
-									<%-- </form> --%>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Loan Staff Table</h4>
+              <div class="row">
+                <div class="col-12">
+                  <div class="table-responsive">
+                    <table id="order-listing" class="table">
+                      <thead>
+                        <tr>
+                            
+                          <th>Serial #</th>
+                            
+                            <th>BirthDate</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>gender</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                             <!-- <th>Address</th>  -->
+                            <!-- <th>Edit</th> -->
+                            <th>Delete</th>
+                            
+                        </tr>
+                      </thead>
+                      <tbody>
+                      
+                      <c:forEach items="${loanStaff}" var="i" varStatus="j">
+							<tr>
+								<td>${j.count}</td>
+								
+								<td>${i.birthDate}</td>
+								<td>${i.firstName}</td>
+								<td>${i.lastName}</td>
+								<td>${i.gender}</td>
+								<td>${i.phoneNumber}</td>
+								<td>${i.loginVO.email}</td>
+								 <%-- <td>${i.address}</td> --%> 
+								
+							 <%-- 	<td>	
+                              		<button class="btn btn-outline-primary">
+                              			<a href="editLoanStaff.html?id=${i.id}">Edit</a>
+                              		</button>
+                              	</td> --%>
+                              	<td>	
+                               		<button class="btn btn-outline-primary">
+                               			<a href="deleteLoanStaff.html?id=${i.id}&loginId=${i.loginVO.id}">Delete</a>
+                               		</button>
+                            	</td>
+							</tr>
+							
+					</c:forEach>
+                      
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-            <!--   <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Complete form validation</h4>
-                  <form class="cmxform" id="signupForm" method="get" action="#">
-                    <fieldset>
-                      <div class="form-group">
-                        <label for="firstname">Firstname</label>
-                        <input id="firstname" class="form-control" name="firstname" type="text">
-                      </div>
-                      <div class="form-group">
-                        <label for="lastname">Lastname</label>
-                        <input id="lastname" class="form-control" name="lastname" type="text">
-                      </div>
-                      <div class="form-group">
-                        <label for="username">Username</label>
-                        <input id="username" class="form-control" name="username" type="text">
-                      </div>
-                      <div class="form-group">
-                        <label for="password">Password</label>
-                        <input id="password" class="form-control" name="password" type="password">
-                      </div>
-                      <div class="form-group">
-                        <label for="confirm_password">Confirm password</label>
-                        <input id="confirm_password" class="form-control" name="confirm_password" type="password">
-                      </div>
-                      <div class="form-group">
-                        <label for="email">Email</label>
-                        <input id="email" class="form-control" name="email" type="email">
-                      </div>
-                      <input class="btn btn-primary" type="submit" value="Submit">
-                    </fieldset>
-                  </form>
-                </div>
-              </div> -->
-            </div>
-          </div>
 					<!-- partial:../../partials/_footer.html -->
-				<jsp:include page="footer.jsp"></jsp:include>
+					<jsp:include page="footer.jsp"></jsp:include>
 					<!-- partial -->
         </div>
         <!-- content-wrapper ends -->
@@ -318,9 +280,9 @@
   <!-- plugins:js -->
   <script src="adminResources/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
-  <!-- Plugin js for this page-->
-  <script src="adminResources/js/jquery.validate.min.js"></script>
-  <script src="adminResources/js/bootstrap-maxlength.min.js"></script>
+  <!-- Plugin js for this <page--></page-->
+  <script src="adminResources/js/jquery.dataTables.js"></script>
+  <script src="adminResources/js/dataTables.bootstrap4.js"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="adminResources/js/off-canvas.js"></script>
@@ -330,10 +292,8 @@
   <script src="adminResources/js/todolist.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="adminResources/js/form-validation.js"></script>
-  <script src="adminResources/js/bt-maxLength.js"></script>
+  <script src="adminResources/js/data-table.js"></script>
   <!-- End custom js for this page-->
 </body>
 
 </html>
-    

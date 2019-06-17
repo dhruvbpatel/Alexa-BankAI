@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c"  uri="http://java.sun.com/jstl/core_rt"%>
-<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
     <!DOCTYPE html>
 <html lang="en">
 
@@ -215,93 +214,71 @@
         <div class="content-wrapper">
           <div class="row grid-margin">
             <div class="col-12">
-                        </div>
-          </div>
-          <div class="row grid-margin">
-            <div class="col-lg-12">
-              <div class="card"	>
-                <div class="card-body">
-                  <h4 class="card-title">Add Loan Rate</h4>
-                 <%--  <form class="cmxform" id="commentForm" method="post" action="insertLoanRate.html"> --%>
-									<f:form action="insertLoanRate.html" method="post" modelAttribute="LoanRateVO">
-										<fieldset>
-											
-											<div class="form-group">
-											
-												<label for="cname">Loan Type</label>
-
-												<f:select path="loanTypeId.id" class="form-control">
-													<c:forEach items="${loanTypeList}" var="i">
-														<option value="${i.id}">${i.loanType}</option>
-													</c:forEach>
-												</f:select>
-
-											</div>
-											<div class="form-group">
-												<label for="cemail">Loan Rate</label>
-												<f:input path="loanRate" class="form-control" type="number"
-													placeholder="Enter Loan Rate" />
-
-											</div>
-
-
-
-
-											<div class="form-group">
-												<label for="ccomment">Loan Rate Description</label>
-
-												<f:textarea id="maxlength-textarea"
-													path="loanRateDescription" class="form-control"
-													maxlength="100" rows="5"
-													placeholder="Enter the Description of the Loan" />
-											</div>
-											<f:hidden path="id"/>
-											<input class="btn btn-primary" type="submit" value="Submit">
-											<input class="btn btn-primary" type="reset" value="Reset">
-											
-										</fieldset>
-									</f:form>
-									<%-- </form> --%>
-                </div>
+              <div class="card">
+                
               </div>
             </div>
           </div>
+      
           <div class="row">
             <div class="col-lg-12">
-            <!--   <div class="card">
+              <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Complete form validation</h4>
-                  <form class="cmxform" id="signupForm" method="get" action="#">
+                  <h4 class="card-title">Staff Register</h4>
+                  <br>
+                  <f:form class="cmxform" id="signupForm" method="post" action="insertLoanStaff.html" modelAttribute="LoanStaffVO">
                     <fieldset>
                       <div class="form-group">
                         <label for="firstname">Firstname</label>
-                        <input id="firstname" class="form-control" name="firstname" type="text">
+                        <f:input path="firstName" id="firstname" class="form-control" name="firstname" type="text" placeholder="Enter a first name"/>
                       </div>
                       <div class="form-group">
                         <label for="lastname">Lastname</label>
-                        <input id="lastname" class="form-control" name="lastname" type="text">
+                        <f:input id="lastname" path="lastName" class="form-control" name="lastname" type="text" placeholder="Enter a last name"/>
                       </div>
+                 
+          
                       <div class="form-group">
-                        <label for="username">Username</label>
-                        <input id="username" class="form-control" name="username" type="text">
+                        <label for="gender">Gender</label><br>
+                       <f:radiobutton path="gender"  name="gender" value="male" /> Male
+  						<f:radiobutton path="gender"  name="gender" value="female"/> Female
+ 						 <f:radiobutton  path="gender"  name="gender" value="other"/> Other 
                       </div>
+                 
                       <div class="form-group">
-                        <label for="password">Password</label>
-                        <input id="password" class="form-control" name="password" type="password">
+                        <label >phone no:-</label>
+                        <f:input path="phoneNumber" id="phone" class="form-control" name="phone" placeholder="Enter a phone no"/>
                       </div>
-                      <div class="form-group">
-                        <label for="confirm_password">Confirm password</label>
-                        <input id="confirm_password" class="form-control" name="confirm_password" type="password">
-                      </div>
+                      
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input id="email" class="form-control" name="email" type="email">
+                        <f:input id="email" path="loginVO.email" class="form-control" name="email" type="email" placeholder="Enter a email id"/>
                       </div>
+                      
+                      <div class="form-group">
+                        <label >Birth Date</label>
+                        <f:input id="birth_date" class="form-control" name="bdate" path="birthDate" type="date"/>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label >Address</label><br>
+                        <textarea rows="5" cols="50" class="form-control" placeholder="Enter a address" name="address"></textarea>
+                      </div> 
+                      
+                       <!-- <div class="form-group">
+                        	<label >Add Document</label><br>
+                       <input type="file" name="document" class="form-control">
+  					
+                      </div> -->
+                      
+					  <f:input path="id" type="hidden" name="flag"/>         		                      
                       <input class="btn btn-primary" type="submit" value="Submit">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <input class="btn btn-primary" type="reset" value="Reset">
                     </fieldset>
-                  </form>
+                  </f:form>
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
 					<!-- partial:../../partials/_footer.html -->

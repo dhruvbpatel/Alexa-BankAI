@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.VO.LoanRateVO;
-import com.VO.LoanRateVO;
+import com.VO.LoanTypeVO;
 
 @Repository
 public class LoanRateDAO {
@@ -30,20 +30,20 @@ public class LoanRateDAO {
 			e.printStackTrace();
 		}
 	}
-	
 
-	public List search()
-	{
+	public List search(LoanRateVO loanRateVO) {
+		// TODO Auto-generated method stub
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
-			
-		Query q = Session.createQuery("from LoanRateVO");
 		
-		List ls = q.list();
-	transaction.commit();
-		return ls;
+		Query q = Session.createQuery("from LoanRateVO");
+		List loanRateList = q.list();
+		transaction.commit();
+		
+		return loanRateList;
 	}
-//	
+	
+
 	public void delete(LoanRateVO loanRateVO){
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
@@ -53,26 +53,40 @@ public class LoanRateDAO {
 		transaction.commit();
 		Session.close();
 	}
-
-
+	
 	public List edit(LoanRateVO loanRateVO) {
 		Session Session = sessionfactory.openSession();
-		Transaction transaction = Session.beginTransaction();
-			
 		Query q = Session.createQuery("from LoanRateVO where id = " + loanRateVO.getId());
-		
 		List ls = q.list();
-	transaction.commit();
-		
-	System.out.println(ls.size());
+		Session.close();
 		return ls;
-		
-		
+
 	}
+//	
+//	public void delete(LoanTypeVO loanTypeVO){
+//		Session Session = sessionfactory.openSession();
+//		Transaction transaction = Session.beginTransaction();
+//			
+//		Session.delete(loanTypeVO);
+//		
+//		transaction.commit();
+//		Session.close();
+//	}
+//
+//
+//	public List edit(LoanTypeVO loanTypeVO) {
+//		Session Session = sessionfactory.openSession();
+//		Transaction transaction = Session.beginTransaction();
+//			
+//		Query q = Session.createQuery("from LoanTypeVO where id = " + loanTypeVO.getId());
+//		
+//		List ls = q.list();
+//	transaction.commit();
+//		return ls;
+//	}
+//	
+//	
 	
-	
-
-
 }
 
 

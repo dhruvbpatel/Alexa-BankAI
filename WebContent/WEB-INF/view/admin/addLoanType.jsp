@@ -228,7 +228,9 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Add Loan type</h4>
-                  <f:form class="cmxform" id="commentForm" name="loanTypeForm" method="post" action="insertLoanType" onsubmit="return validateForm()" modelAttribute="LoanTypeVO">
+                  
+                  <f:form class="cmxform" id="commentForm" name="loanTypeForm" method="post" action="insertLoanType.html" onsubmit="return validateForm()" modelAttribute="LoanTypeVO">
+                  
                     <fieldset>	
                       <div class="form-group">
                         <label for="cname">Loan type</label>
@@ -240,6 +242,7 @@
                         <f:textarea id="loanDescription" rows="4"  class="form-control" path="loanTypeDescription" placeholder="Enter Loan Description"/>
                       </div>
                       <f:hidden path="id"/>
+                   
                       <input class="btn btn-primary" type="submit"  value="Submit"> 
                        <input class="btn btn-primary" type="reset" value="reset">
                        

@@ -25,10 +25,11 @@
 		
 		<property name="dataSource" ref="dataSource"/>
 		<property name="annotatedClasses">
-			<list>	
-				
-				<value>com.VO.LoanTypeVO</value><!--vo file destination-->
-				<value>com.VO.LoanRateVO</value><!--vo file destination-->
+			<list>
+				<value>com.VO.LoanTypeVO</value>
+				<value>com.VO.LoanRateVO</value>
+				<value>com.VO.LoginVO</value>
+				<value>com.VO.LoanStaffVO</value>
 			</list>
 		</property>
 		
