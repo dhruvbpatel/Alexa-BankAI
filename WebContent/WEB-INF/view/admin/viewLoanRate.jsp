@@ -227,17 +227,16 @@
                       <c:forEach items="${loanRateList}" var="i" varStatus="j">
 							<tr>
 								<td>${j.count}</td>
-															
-								<td>${i.loanRate}</td>
 								
+								<td>${i.loanTypeId.loanType}</td>
+								<td>${i.loanRate }</td>
 								<td>${i.loanRateDescription}</td>
-								<td>${i.cid.loanType}</td>
 							 	<td>	
                               		<button class="btn btn-outline-primary">
-                              			<a href="editLoanRate?id=${i.id}">Edit</a>
+                              			<a href="editLoanRate.html?id=${i.id}">Edit</a>
                               		</button>
                                		<button class="btn btn-outline-primary">
-                               			<a href="deleteLoanRate?id=${i.id}">Delete</a>
+                               			<a href="deleteLoanRate.html?id=${i.id}">Delete</a>
                                		</button>
                             	</td>
 							</tr>

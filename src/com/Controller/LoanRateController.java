@@ -1,4 +1,4 @@
-package com.Controller;
+package com.controller;
 
 import java.util.List;
 
@@ -26,58 +26,48 @@ public class LoanRateController {
 	@Autowired
 	LoanTypeDAO loanTypeDAO;
 	
-	@RequestMapping(value="loadLoanRate",method=RequestMethod.GET)
+	@RequestMapping(value="loadLoanRate.html",method=RequestMethod.GET)
 	public ModelAndView loadLoanRate()
 	{
 		
-		List loanTypeList =loanTypeDAO.search();
+		List loanTypeList =this.loanTypeDAO.search();
 		
-		return new ModelAndView("admin/addLoanRate","loanTypeList",loanTypeList).addObject("loanRateVO",new LoanRateVO());
+		return new ModelAndView("admin/addLoanRate","LoanRateVO",new LoanRateVO()).addObject("loanTypeList",loanTypeList);
 		
 	}
 	
-	@RequestMapping(value="insertLoanRate",method=RequestMethod.POST)
+	@RequestMapping(value="insertLoanRate.html",method=RequestMethod.POST)
 	public ModelAndView insertLoanRate(@ModelAttribute LoanRateVO loanRateVO)
 	{
+		
 		this.loanRateDAO.insert(loanRateVO);
-		return new ModelAndView("redirect:/loadLoanRate");
-		
-	}
-	
-	
-	@RequestMapping(value="viewLoanRate",method=RequestMethod.GET)
-	public ModelAndView viewLoanType(@ModelAttribute LoanRateVO loanRateVO){
-		
-		List ls = loanRateDAO.search();
-		return new ModelAndView("admin/viewLoanRate","loanRateList",ls);
-	}
+		return new ModelAndView("redirect:/viewLoanRate.html");
 
-	@RequestMapping(value="deleteLoanRate",method=RequestMethod.GET)
+				
+	}
+	
+
+	@RequestMapping(value="viewLoanRate.html",method=RequestMethod.GET)
+	public ModelAndView viewLoanRate(@ModelAttribute LoanRateVO loanRateVO){		
+	List loanRateList = loanRateDAO.search(loanRateVO);
+	return new ModelAndView("admin/viewLoanRate","loanRateList",loanRateList);
+}
+	
+	@RequestMapping(value="deleteLoanRate.html",method=RequestMethod.GET)
 	public ModelAndView deleteLoanType(@RequestParam int id,@ModelAttribute LoanRateVO loanRateVO){
 		
 		loanRateVO.setId(id);
 		loanRateDAO.delete(loanRateVO);
-			
-	return new ModelAndView("redirect:/viewLoanRate");	
+		
+		
+	return new ModelAndView("redirect:/viewLoanRate.html");	
 	}
-	
-	
-	@RequestMapping(value="editLoanRate",method=RequestMethod.GET)
+
+	@RequestMapping(value="editLoanRate.html",method=RequestMethod.GET)
 	public ModelAndView editLoanRate(@RequestParam int id,@ModelAttribute LoanRateVO loanRateVO){
 		loanRateVO.setId(id);
-		
 		List loanRateList  = loanRateDAO.edit(loanRateVO);
-		
-		List loanTypeList = loanTypeDAO.search();
-		LoanRateVO loanRateVO2 = (LoanRateVO)loanRateList.get(0);
-		
-		System.out.println(loanRateVO2.getLoanRate());
-		System.out.println(loanRateVO2.getLoanRateDescription());
-		System.out.println(loanRateVO2.getCid().getLoanType());
-		
-		return new ModelAndView("admin/addLoanRate","loanRateVO",(LoanRateVO)loanRateList.get(0)).addObject("loanTypeList",loanTypeList);
+		List loanTypeList =loanTypeDAO.search();
+		return new ModelAndView("admin/addLoanRate","LoanRateVO",(LoanRateVO)loanRateList.get(0)).addObject("loanTypeList",loanTypeList);
 	}
-	
-	
-	
 }

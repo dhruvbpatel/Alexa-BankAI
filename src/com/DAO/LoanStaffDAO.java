@@ -42,7 +42,7 @@ public class LoanStaffDAO {
 		List ls=q.list();
 		transaction.commit();
 		Session.close();
-		
+			
 		
 		return ls;
 	}

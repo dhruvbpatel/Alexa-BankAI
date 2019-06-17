@@ -222,54 +222,46 @@
               <div class="card"	>
                 <div class="card-body">
                   <h4 class="card-title">Add Loan Rate</h4>
-                 <%--  <form class="cmxform" id="commentForm" method="post" action="insertLoanRate"> --%>
-                 
-                  ${loanRateVO.cid.id }
-                 ${loanRateVO.loanRate }
-                  ${loanRateVO.loanRateDescription }
-                  
-               
-                 
-                  <f:form action="insertLoanRate" method="post" modelAttribute="loanRateVO">
-                    <fieldset>
-                    
-                     
-                 <%-- <f:input path="loanRateDescription"/> --%>
-                      <div class="form-group">
-                      
-                        <label for="cname">Loan Type</label>
-                    			
-                    			 <f:select path="cid.id" class="form-control">
-									<c:forEach  items="${loanTypeList}" var="i">
-										<option value="${i.id}" >${i.loanType}</option>
-									</c:forEach> 
-								</f:select>
-                     
-                     			<f:hidden path="id"/>
-                      </div>
-                      
-                      <div class="form-group">
-                      	  
-                      	  	<label for="cemail">Loan Rate</label>
-                        	
-                        	<f:input  path="loanRate" class="form-control" type="number" placeholder="Enter Loan Rate" />
-                        
-                      </div>
-                      
-                        
-                                            
-                      
-                      <div class="form-group">
-                        <label for="ccomment">Loan Rate Description (required)</label>
-                    
-                      <textarea id="maxlength-textarea" name="loanRateDescription" class="form-control" maxlength="100" rows="5" placeholder="Enter the Description of the Loan"></textarea>
-                      </div>
-                      <input class="btn btn-primary" type="submit" value="Submit">
-                       <input class="btn btn-primary" type="reset" value="Reset">
-                       <input type="hidden" name="flag" value="addLoanRate" >
-                    </fieldset>
-                    </f:form>
-                  <%-- </form> --%>
+                 <%--  <form class="cmxform" id="commentForm" method="post" action="insertLoanRate.html"> --%>
+									<f:form action="insertLoanRate.html" method="post" modelAttribute="LoanRateVO">
+										<fieldset>
+											
+											<div class="form-group">
+											
+												<label for="cname">Loan Type</label>
+
+												<f:select path="loanTypeId.id" class="form-control">
+													<c:forEach items="${loanTypeList}" var="i">
+														<option value="${i.id}">${i.loanType}</option>
+													</c:forEach>
+												</f:select>
+
+											</div>
+											<div class="form-group">
+												<label for="cemail">Loan Rate</label>
+												<f:input path="loanRate" class="form-control" type="number"
+													placeholder="Enter Loan Rate" />
+
+											</div>
+
+
+
+
+											<div class="form-group">
+												<label for="ccomment">Loan Rate Description</label>
+
+												<f:textarea id="maxlength-textarea"
+													path="loanRateDescription" class="form-control"
+													maxlength="100" rows="5"
+													placeholder="Enter the Description of the Loan" />
+											</div>
+											<f:hidden path="id"/>
+											<input class="btn btn-primary" type="submit" value="Submit">
+											<input class="btn btn-primary" type="reset" value="Reset">
+											
+										</fieldset>
+									</f:form>
+									<%-- </form> --%>
                 </div>
               </div>
             </div>

@@ -54,12 +54,14 @@
               </a>
               <div class="collapse" id="page-layouts">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="loadLoanStaff">Add Loan Staff</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="loadLoanStaff">View Loan Staff</a></li>
+                  <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="loadLoanStaff.html">Add Loan Staff</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="viewLoanStaff.html">View Loan Staff</a></li>
              <!--      <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="pages/layout/horizontal-menu.html">Horizontal Menu</a></li> -->
                 </ul>
               </div>
             </li>
+
+
 
             <li class="nav-item d-none d-lg-block">
               <a class="nav-link" data-toggle="collapse" href="#sidebar-layouts" aria-expanded="false" aria-controls="sidebar-layouts">
@@ -69,8 +71,8 @@
               </a>
               <div class="collapse" id="sidebar-layouts">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="loadLoanType">Add loan </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="viewLoanType">View loan</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="loadLoanType.html">Add loan </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="viewLoanType.html">View loan</a></li>
                  <!--  <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden.html">Sidebar Hidden</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">Sidebar Overlay</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-fixed.html">Sidebar Fixed</a></li> -->
@@ -85,8 +87,8 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="loadLoanRate">Add loan Rate </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="viewLoanRate">View loan Rate</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="loadLoanRate.html">Add loan Rate </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="viewLoanRate.html">View loan Rate</a></li>
                   <!-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/badges.html">Badges</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/ui-features/breadcrumbs.html">Breadcrumbs</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
