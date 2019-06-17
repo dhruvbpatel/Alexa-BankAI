@@ -19,14 +19,14 @@ public class LoanRateVO implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
-	@Column(name="loanRate")
+	@Column(name="LoanRate")
 	private int loanRate;
 	
-	@Column(name="loanRateDescription")
+	@Column(name="LoanRateDescription")
 	private String loanRateDescription;
 	
-	@ManyToOne
-	private LoanTypeVO loanTypeId;
+	@ManyToOne()
+	private LoanTypeVO cid;
 
 	public int getId() {
 		return id;
@@ -52,17 +52,13 @@ public class LoanRateVO implements Serializable {
 		this.loanRateDescription = loanRateDescription;
 	}
 
-	public LoanTypeVO getLoanTypeId() {
-		return loanTypeId;
+	public LoanTypeVO getCid() {
+		return cid;
 	}
 
-	public void setLoanTypeId(LoanTypeVO loanTypeId) {
-		this.loanTypeId = loanTypeId;
+	public void setCid(LoanTypeVO cid) {
+		this.cid = cid;
 	}
-
-
-	
-
 	
 	
 	}

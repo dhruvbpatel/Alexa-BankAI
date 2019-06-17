@@ -30,34 +30,43 @@ public class LoanTypeDAO {
 		}
 	}
 	
-	public List search(){
-	
+
+	public List search()
+	{
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
 			
 		Query q = Session.createQuery("from LoanTypeVO");
 		
-		List ls=q.list();
-		transaction.commit();
-		Session.close();
+		List ls = q.list();
+	transaction.commit();
 		return ls;
 	}
 	
 	public void delete(LoanTypeVO loanTypeVO){
-		
-			Session Session = sessionfactory.openSession();
-			Transaction transaction = Session.beginTransaction();
+		Session Session = sessionfactory.openSession();
+		Transaction transaction = Session.beginTransaction();
 			
-			Session.delete(loanTypeVO);
-			transaction.commit();
-			Session.close();
+		Session.delete(loanTypeVO);
 		
+		transaction.commit();
+		Session.close();
 	}
+
+
 	public List edit(LoanTypeVO loanTypeVO) {
 		Session Session = sessionfactory.openSession();
+		Transaction transaction = Session.beginTransaction();
+			
 		Query q = Session.createQuery("from LoanTypeVO where id = " + loanTypeVO.getId());
-		List ls=q.list();
-		Session.close();
+		
+		List ls = q.list();
+	transaction.commit();
 		return ls;
 	}
+	
+	
+	
 }
+
+
