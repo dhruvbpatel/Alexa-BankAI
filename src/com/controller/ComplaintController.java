@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.DAO.ComplaintDAO;
+import com.DAO.LoanRateDAO;
+import com.DAO.LoanTypeDAO;
 import com.VO.ComplaintVO;
+import com.VO.LoanRateVO;
 import com.VO.LoanTypeVO;
 import com.VO.LoginVO;
 
@@ -24,18 +27,23 @@ public class ComplaintController {
 	@Autowired
 	ComplaintDAO complaintDAO;
 	
+	@Autowired
+	LoanTypeDAO loanTypeDAO;
+	
+	@Autowired
+	LoanRateDAO loanRateDAO;
 
 	@RequestMapping(value="loadAddComplaint.html",method=RequestMethod.GET)
 	public ModelAndView loadAddComplient()
 	{
 		return new  ModelAndView("admin/addComplaint","ComplaintVO",new ComplaintVO());
 		
-		
 	}
 	
 	@RequestMapping(value="insertComplaint.html",method=RequestMethod.POST)
 	public ModelAndView insertMethod(@ModelAttribute ComplaintVO complaintVO,LoginVO loginVO)
 	{
+		loginVO.setId(11);
 		
 		Date d=new Date();
 
@@ -127,17 +135,26 @@ public class ComplaintController {
 		DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 		
 		complaintVO.setStatus("PENDING");
+		loginVO.setId(11);
 		complaintVO.setLoginVO(loginVO);
 		complaintVO.setComplaintDate(format.format(d));
 		
 		this.complaintDAO.insert(complaintVO);
 		
-		return new ModelAndView("staff/addComplaint.html");
-		
+		return new ModelAndView("staff/addComplaint","ComplaintVO",new ComplaintVO());
 	}
 	
+	@RequestMapping(value="viewStaffLoanType.html",method=RequestMethod.GET)
+	public ModelAndView viewStaffLoanType()
+	{
+		List ls=loanTypeDAO.search();
+		return new ModelAndView("staff/viewStaffLoanType","staffLoanType",ls);	
+	}
 	
-	
-	
+	@RequestMapping(value="viewStaffLoanRate.html",method=RequestMethod.GET)
+	public ModelAndView viewStaffLoanRate(@ModelAttribute LoanRateVO loanRateVO){		
+	List StaffLoanRateList = loanRateDAO.search(loanRateVO);
+	return new ModelAndView("staff/viewStaffLoanRate","staffLoanRateList",StaffLoanRateList);
+}
 	
 }

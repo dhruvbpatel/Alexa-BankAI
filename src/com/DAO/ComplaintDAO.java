@@ -38,7 +38,7 @@ public class ComplaintDAO {
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
 			
-		Query q = Session.createQuery("from ComplaintVO");
+		Query q = Session.createQuery("from ComplaintVO where loginVO.role = 'ROLE_STAFF' ");
 		
 		List ls=q.list();
 		transaction.commit();

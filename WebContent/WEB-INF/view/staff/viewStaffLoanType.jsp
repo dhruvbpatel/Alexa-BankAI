@@ -219,24 +219,17 @@
                             <th>Serial #</th>
                             <th>Loan Type</th>
                             <th>Loan Description</th>
-                            <th>Action</th>
+                           
                         </tr>
                       </thead>
                       <tbody>
                       
-                      <c:forEach items="${loantype}" var="i" varStatus="j">
+                      <c:forEach items="${staffLoanType}" var="i" varStatus="j">
 							<tr>
 								<td>${j.count}</td>
 								<td>${i.loanType}</td>
 								<td>${i.loanTypeDescription}</td>
-							 	<td>	
-                              		<button class="btn btn-outline-primary">
-                              			<a href="editLoan.html?id=${i.id}">Edit</a>
-                              		</button>
-                               		<button class="btn btn-outline-primary">
-                               			<a href="deleteLoan.html?id=${i.id}">Delete</a>
-                               		</button>
-                            	</td>
+							 	
 							</tr>
 							<%-- <td><a href="RegisterController?flag=del&id=${i.id}">Delete</a>
 							<a href="RegisterController?flag=edit&id=${i.id}">Update</a></td></tr> --%>

@@ -21,7 +21,7 @@
               <a class="nav-link" href="index.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
-                <span class="badge badge-success">New</span>
+                
               </a>
             </li>
             <!-- <li class="nav-item">
@@ -46,7 +46,7 @@
             </li>
  -->
  
-  <li class="nav-item">
+  <!-- <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#page-layouts" aria-expanded="false" aria-controls="page-layouts">
                 <i class="icon-check menu-icon"></i>
                 <span class="menu-title">Manage Loan Staff</span>
@@ -55,10 +55,10 @@
               <div class="collapse" id="page-layouts">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item"> <a class="nav-link" href="pages/layout/rtl-layout.html">View Loan Staff</a></li>
-             <!--      <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="pages/layout/horizontal-menu.html">Horizontal Menu</a></li> -->
+                  <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="pages/layout/horizontal-menu.html">Horizontal Menu</a></li>
                 </ul>
               </div>
-            </li>
+            </li> -->
 
 
 
@@ -70,7 +70,7 @@
               </a>
               <div class="collapse" id="sidebar-layouts">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-collapsed.html">View loan</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="viewStaffLoanType.html">View loan</a></li>
                  <!--  <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden.html">Sidebar Hidden</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">Sidebar Overlay</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-fixed.html">Sidebar Fixed</a></li> -->
@@ -85,7 +85,7 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">View loan Rate</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="viewStaffLoanRate.html">View loan Rate</a></li>
                   <!-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/badges.html">Badges</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/ui-features/breadcrumbs.html">Breadcrumbs</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
@@ -181,10 +181,10 @@
               </a>
               <div class="collapse" id="editors">
                 <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="StaffComplaint.html">add Complaint</a></li>
-                  <li class="nav-item"><a class="nav-link" href="viewUsersComplaint.html">View Users Complaint</a></li>
-                  <li class="nav-item"><a class="nav-link" href="viewStaffComplaint.html">View Staff Complaint</a></li>
-                  
+                <li class="nav-item"><a class="nav-link" href="loadStaffAddComplaint.html">add Complaint</a></li>
+                
+                  <li class="nav-item"><a class="nav-link" href="viewStaffComplaint.html">View Reply</a></li>
+                  <li class="nav-item"><a class="nav-link" href="viewUsersComplaint.html">View Users Complaint</a></li>  
                 </ul>
               </div>
             </li>

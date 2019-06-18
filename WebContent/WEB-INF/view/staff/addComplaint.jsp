@@ -224,22 +224,22 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Add Complaint</h4>
-                  <form class="cmxform" id="commentForm" method="get" action="#">
+                  <f:form class="cmxform" id="commentForm" method="post" action="insertStaffComplaint.html"  modelAttribute="ComplaintVO">
                     <fieldset>
                       <div class="form-group">
                         <label for="cname">Complaint Subject</label>
-                        <input id="cname" action="insertStaffComplaint.html" class="form-control" name="name" minlength="2" type="text" placeholder="Enter Complaint Subject" >
+                        <f:input id="cname" action="insertStaffComplaint.html" class="form-control" name="name" minlength="2" type="text" placeholder="Enter Complaint Subject" path="complaintSubject"/>
                       </div>
                       
                       <div class="form-group">
                         <label for="ccomment">Complaint Description</label>
-                        <textarea id="ccomment" class="form-control" name="comment" placeholder="Enter Complaint Description" required></textarea>
+                        <f:textarea path="complaintDescrption" id="ccomment" class="form-control" name="comment" placeholder="Enter Complaint Description"/>
                       </div>
                        
                       <input class="btn btn-primary" type="submit" value="Submit">
                       </fieldset>
                     
-                  </form>
+                  </f:form>
                 </div>
               </div>
             </div>
