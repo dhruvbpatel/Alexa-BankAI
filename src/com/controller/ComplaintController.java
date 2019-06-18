@@ -70,4 +70,32 @@ public class ComplaintController {
 		
 	}
 	
+	@RequestMapping(value="replyComplaint.html",method=RequestMethod.GET)
+	public ModelAndView editLoan(@RequestParam int id,@ModelAttribute ComplaintVO complaintVO)
+	{
+		complaintVO.setId(id);
+		List ls=complaintDAO.edit(complaintVO);
+		return new ModelAndView("admin/ReplyComplaint","ComplaintVO",ls.get(0));
+		
+	}
+	
+	@RequestMapping(value="resolvedComplaint.html",method=RequestMethod.POST)
+	public ModelAndView resolvedComplaint(@RequestParam int id,@ModelAttribute ComplaintVO complaintVO)
+	{
+		Date d=new Date();
+
+		DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
+		
+		complaintVO.setStatus("Resolved");
+		
+		complaintVO.setComplaintDate(format.format(d));
+		
+		this.complaintDAO.insert(complaintVO);
+		
+		return new ModelAndView("redirect:/viewComplaint.html");
+	}
+	
+	
+	
+	
 }

@@ -57,5 +57,12 @@ public class ComplaintDAO {
 	
 }
 	
+	public List edit(ComplaintVO complaintVO) {
+		Session Session = sessionfactory.openSession();
+		Query q = Session.createQuery("from ComplaintVO where id = " + complaintVO.getId());
+		List ls=q.list();
+		Session.close();
+		return ls;
+	}
 	
 }
