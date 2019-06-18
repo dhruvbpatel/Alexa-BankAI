@@ -248,12 +248,11 @@
                       </div>
                       
 
-						<f:hidden path="loginVO.email"/>
+						<f:hidden path="loginVO.id"/>
 						<f:hidden path="status"/>
 						<f:hidden path="complaintDate"/>
 						<f:hidden path="replyDate"/>
-						
-                      <f:hidden path="id"/>
+                     	 <f:hidden path="id"/>
                    
                       <input class="btn btn-primary" type="submit"  value="Submit"> 
                        <input class="btn btn-primary" type="reset" value="reset">

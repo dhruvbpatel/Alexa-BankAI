@@ -11,4 +11,6 @@ public class loadController {
 	public ModelAndView index(){
 		return new ModelAndView("admin/index");
 	}
+	
+	
 }

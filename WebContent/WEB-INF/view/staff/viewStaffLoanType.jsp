@@ -8,7 +8,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>BankAI Admin</title>
+  <title>Victory Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="adminResources/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="adminResources/css/simple-line-icons.css">
@@ -209,7 +209,7 @@
         <div class="content-wrapper">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Complaint Table</h4>
+              <h4 class="card-title">Loan Type Table</h4>
               <div class="row">
                 <div class="col-12">
                   <div class="table-responsive">
@@ -217,48 +217,24 @@
                       <thead>
                         <tr>
                             <th>Serial #</th>
-                            
-                            <th> Complaint Subject</th>
-                            <th>Complaint Descrption </th>
-                            <th>Complaint Date </th>
-                            <th>Email </th>
-                            <th> Reply Date</th>
-                            <th>Reply </th>
-                            <th>Status </th>
+                            <th>Loan Type</th>
+                            <th>Loan Description</th>
                             <th>Action</th>
-                            <th>Delete</th>
                         </tr>
                       </thead>
                       <tbody>
                       
-                      <c:forEach items="${complaint}" var="i" varStatus="j">
-				
+                      <c:forEach items="${loantype}" var="i" varStatus="j">
 							<tr>
 								<td>${j.count}</td>
-								<td>${i.complaintSubject}</td>
-								<td>${i.complaintDescrption}</td>
-								<td>${i.complaintDate }</td>
-								<td>${i.loginVO.email }</td>
-								<td>${i.replyDate}</td>
-								<td>${i.reply }</td>
-								<td>${i.status }</td>
+								<td>${i.loanType}</td>
+								<td>${i.loanTypeDescription}</td>
 							 	<td>	
-							 	
-							 		<c:if test="${i.status ne 'Resolved' }">
-							 			<button class="btn btn-outline-primary">
-                              		 		<a href="replyComplaint.html?id=${i.id}">Reply</a> 
-                              			</button>
-                              		</c:if>
-                              		
-                              		<c:if test="${i.status eq 'Resolved' }">
-							 			DONE
-                              		</c:if>
-                              		
-                              		
-                              		</td>
-                              		<td>
+                              		<button class="btn btn-outline-primary">
+                              			<a href="editLoan.html?id=${i.id}">Edit</a>
+                              		</button>
                                		<button class="btn btn-outline-primary">
-                               			<a href="deleteComplaint.html?id=${i.id}">Delete</a>
+                               			<a href="deleteLoan.html?id=${i.id}">Delete</a>
                                		</button>
                             	</td>
 							</tr>

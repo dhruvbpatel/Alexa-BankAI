@@ -88,12 +88,54 @@ public class ComplaintController {
 		
 		complaintVO.setStatus("Resolved");
 		
-		complaintVO.setComplaintDate(format.format(d));
+		complaintVO.setReplyDate(format.format(d));
+		
+		System.out.println(complaintVO.getStatus());
 		
 		this.complaintDAO.insert(complaintVO);
 		
 		return new ModelAndView("redirect:/viewComplaint.html");
 	}
+	
+	@RequestMapping(value="viewUsersComplaint",method=RequestMethod.GET)
+	public ModelAndView viewStaffComplaint(@ModelAttribute ComplaintVO complaintVO)
+	{
+		List ls=complaintDAO.search();
+		return new ModelAndView("staff/viewComplaint","complaint",ls);	
+	}
+	
+	
+	
+
+	@RequestMapping(value="loadStaffAddComplaint.html",method=RequestMethod.GET)
+	public ModelAndView loadStaffAddComplaint()
+	{
+		return new  ModelAndView("staff/addComplaint","ComplaintVO",new ComplaintVO());
+		
+		
+	}
+	
+	
+	
+	
+	@RequestMapping(value="insertStaffComplaint.html",method=RequestMethod.POST)
+	public ModelAndView insertStaffComplaint(@ModelAttribute ComplaintVO complaintVO,LoginVO loginVO)
+	{
+		
+		Date d=new Date();
+
+		DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
+		
+		complaintVO.setStatus("PENDING");
+		complaintVO.setLoginVO(loginVO);
+		complaintVO.setComplaintDate(format.format(d));
+		
+		this.complaintDAO.insert(complaintVO);
+		
+		return new ModelAndView("staff/addComplaint.html");
+		
+	}
+	
 	
 	
 	
