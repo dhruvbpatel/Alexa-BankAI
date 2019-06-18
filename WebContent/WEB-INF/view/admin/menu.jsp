@@ -184,7 +184,7 @@
               </a>
               <div class="collapse" id="editors">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"><a class="nav-link" href="pages/forms/text_editor.html">View Complaint</a></li>
+                  <li class="nav-item"><a class="nav-link" href="viewComplaint.html">View Complaint</a></li>
                   <!-- <li class="nav-item"><a class="nav-link" href="pages/forms/code_editor.html">Code editors</a></li> -->
                 </ul>
               </div>

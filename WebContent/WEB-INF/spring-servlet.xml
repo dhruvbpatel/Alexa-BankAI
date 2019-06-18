@@ -30,6 +30,7 @@
 				<value>com.VO.LoanRateVO</value>
 				<value>com.VO.LoginVO</value>
 				<value>com.VO.LoanStaffVO</value>
+				<value>com.VO.ComplaintVO</value>
 			</list>
 		</property>
 		
