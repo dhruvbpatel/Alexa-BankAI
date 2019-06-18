@@ -58,4 +58,12 @@ public class LoanTypeController {
 		return new ModelAndView("admin/addLoanType","LoanTypeVO",ls.get(0));
 		
 	}
+	
+	@RequestMapping(value="viewStaffLoanType.html",method=RequestMethod.GET)
+	public ModelAndView viewStaffLoanType()
+	{
+		List ls=loanTypeDAO.search();
+		return new ModelAndView("staff/viewStaffLoanType","staffLoanType",ls);	
+	}
+	
 }

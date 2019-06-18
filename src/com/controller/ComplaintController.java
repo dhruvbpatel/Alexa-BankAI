@@ -79,7 +79,7 @@ public class ComplaintController {
 	}
 	
 	@RequestMapping(value="replyComplaint.html",method=RequestMethod.GET)
-	public ModelAndView editLoan(@RequestParam int id,@ModelAttribute ComplaintVO complaintVO)
+	public ModelAndView replyComplaint(@RequestParam int id,@ModelAttribute ComplaintVO complaintVO)
 	{
 		complaintVO.setId(id);
 		List ls=complaintDAO.edit(complaintVO);
@@ -105,13 +105,20 @@ public class ComplaintController {
 		return new ModelAndView("redirect:/viewComplaint.html");
 	}
 	
-	@RequestMapping(value="viewUsersComplaint",method=RequestMethod.GET)
+	@RequestMapping(value="viewStaffComplaint.html",method=RequestMethod.GET)
 	public ModelAndView viewStaffComplaint(@ModelAttribute ComplaintVO complaintVO)
 	{
-		List ls=complaintDAO.search();
-		return new ModelAndView("staff/viewComplaint","complaint",ls);	
+		List ls=complaintDAO.searchUserComplaint();
+		return new ModelAndView("staff/viewStaffComplaint","complaint",ls);	
 	}
 	
+	
+	@RequestMapping(value="viewOwnComplaint.html",method=RequestMethod.GET)
+	public ModelAndView viewOwnComplaint(@ModelAttribute ComplaintVO complaintVO)
+	{
+		List ls=complaintDAO.searchUserComplaint();
+		return new ModelAndView("staff/viewOwnComplaint","complaint",ls);	
+	}
 	
 	
 
@@ -144,17 +151,36 @@ public class ComplaintController {
 		return new ModelAndView("staff/addComplaint","ComplaintVO",new ComplaintVO());
 	}
 	
-	@RequestMapping(value="viewStaffLoanType.html",method=RequestMethod.GET)
-	public ModelAndView viewStaffLoanType()
+	
+	
+	@RequestMapping(value="replyStaffComplaint.html",method=RequestMethod.GET)
+	public ModelAndView replyStaffComplaint(@RequestParam int id,@ModelAttribute ComplaintVO complaintVO)
 	{
-		List ls=loanTypeDAO.search();
-		return new ModelAndView("staff/viewStaffLoanType","staffLoanType",ls);	
+		complaintVO.setId(id);
+		List ls=complaintDAO.edit(complaintVO);
+		return new ModelAndView("staff/replyStaffComplaint","ComplaintVO",ls.get(0));
+		
+	}
+
+	
+	@RequestMapping(value="resolvedStaffComplaint.html",method=RequestMethod.POST)
+	public ModelAndView resolvedStaffComplaint(@RequestParam int id,@ModelAttribute ComplaintVO complaintVO)
+	{
+		Date d=new Date();
+
+		DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
+		
+		complaintVO.setStatus("Resolved");
+		
+		complaintVO.setReplyDate(format.format(d));
+		
+		System.out.println(complaintVO.getStatus());
+		
+		this.complaintDAO.insert(complaintVO);
+		
+		return new ModelAndView("redirect:/viewStaffComplaint.html");
 	}
 	
-	@RequestMapping(value="viewStaffLoanRate.html",method=RequestMethod.GET)
-	public ModelAndView viewStaffLoanRate(@ModelAttribute LoanRateVO loanRateVO){		
-	List StaffLoanRateList = loanRateDAO.search(loanRateVO);
-	return new ModelAndView("staff/viewStaffLoanRate","staffLoanRateList",StaffLoanRateList);
-}
+
 	
 }

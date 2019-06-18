@@ -70,4 +70,13 @@ public class LoanRateController {
 		List loanTypeList =loanTypeDAO.search();
 		return new ModelAndView("admin/addLoanRate","LoanRateVO",(LoanRateVO)loanRateList.get(0)).addObject("loanTypeList",loanTypeList);
 	}
+	
+	
+	
+	@RequestMapping(value="viewStaffLoanRate.html",method=RequestMethod.GET)
+	public ModelAndView viewStaffLoanRate(@ModelAttribute LoanRateVO loanRateVO){		
+		List StaffLoanRateList = loanRateDAO.search(loanRateVO);
+		return new ModelAndView("staff/viewStaffLoanRate","staffLoanRateList",StaffLoanRateList);
+	}
+	
 }

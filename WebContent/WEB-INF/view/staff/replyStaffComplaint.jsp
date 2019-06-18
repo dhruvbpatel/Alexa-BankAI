@@ -1,33 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
- <%@ taglib prefix="c"  uri="http://java.sun.com/jstl/core_rt"%>
-<!DOCTYPE html>
+<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+
+<script src="adminResources/js/formValidations.js"></script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>BankAI Admin</title>
+  <title>Victory Admin</title>
   <!-- plugins:css -->
+  <!-- <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css"> -->
   <link rel="stylesheet" href="adminResources/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="adminResources/css/simple-line-icons.css">
-  
   <link rel="stylesheet" href="adminResources/css/flag-icon.min.css">
   <link rel="stylesheet" href="adminResources/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
-  <link rel="stylesheet" href="adminResources/css/dataTables.bootstrap4.css" />
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="adminResources/css/style.css">
   <!-- endinject -->
+  
   <link rel="shortcut icon" href="adminResources/images/favicon.png" />
 </head>
 
 <body>
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
+    
     <jsp:include page="header.jsp"></jsp:include>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
@@ -204,75 +211,68 @@
         </div>
         <!-- partial -->
         <!-- partial:../../partials/_sidebar.html -->
+        
         <jsp:include page="menu.jsp"></jsp:include>
+        
         <!-- partial -->
         <div class="content-wrapper">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Complaint Table</h4>
-              <div class="row">
-                <div class="col-12">
-                  <div class="table-responsive">
-                    <table id="order-listing" class="table">
-                      <thead>
-                        <tr>
-                            <th>Serial #</th>
-                            
-                            <th> Complaint Subject</th>
-                            <th>Complaint Descrption </th>
-                            <th>Complaint Date </th>
-                            <th>Email </th>
-                            <th> Reply Date</th>
-                            <th>Reply </th>
-                            <th>Status </th>
-                            <th>Action</th>
-                            
-                        </tr>
-                      </thead>
-                      <tbody>
-                      
-                      <c:forEach items="${complaint}" var="i" varStatus="j">
-				
-							<tr>
-								<td>${j.count}</td>
-								<td>${i.complaintSubject}</td>
-								<td>${i.complaintDescrption}</td>
-								<td>${i.complaintDate }</td>
-								<td>${i.loginVO.email }</td>
-								<td>${i.replyDate}</td>
-								<td>${i.reply }</td>
-								<td>${i.status }</td>
-							 	<td>	
-							 	
-							 		<c:if test="${i.status ne 'Resolved' }">
-							 			<button class="btn btn-outline-primary">
-                              		 		<a href="replyStaffComplaint.html?id=${i.id}">Reply</a> 
-                              			</button>
-                              		</c:if>
-                              		
-                              		<c:if test="${i.status eq 'Resolved' }">
-							 			DONE
-                              		</c:if>
-                              		
-                              		
-                              		</td>
-                              		
-							</tr>
-							<%-- <td><a href="RegisterController?flag=del&id=${i.id}">Delete</a>
-							<a href="RegisterController?flag=edit&id=${i.id}">Update</a></td></tr> --%>
-					</c:forEach>
-                           
+          <div class="row grid-margin">
+            <div class="col-12">
+              <div class="card">
+                
+              </div>
+            </div>
+          </div>
+          <div class="row grid-margin">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Add Complaint Reply</h4>
+                  
+                  <f:form class="cmxform" id="commentForm" name="loanTypeForm" method="post" action="resolvedStaffComplaint.html" onsubmit="return validateForm()" modelAttribute="ComplaintVO">
+                  
+                    <fieldset>	
+                      <div class="form-group">
+                        <label for="cname">Complaint Subject</label>
+                        <f:input id="subject" class="form-control" path="complaintSubject"  type="text" placeholder="" readonly="true" />
+                      </div>
                         
-              
-                      </tbody>
-                    </table>
-                  </div>
+                        <div class="form-group">
+                        <label for="ccomment">Complaint description</label>
+                        <f:textarea id="complaintDescrption" rows="4"  class="form-control" path="complaintDescrption" placeholder="" readonly="true" />
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="ccomment">Complaint Reply</label>
+                        <f:textarea id="reply" rows="4"  class="form-control" path="reply" placeholder=""/>
+                      </div>
+                      
+
+						<f:hidden path="loginVO.id"/>
+						<f:hidden path="status"/>
+						<f:hidden path="complaintDate"/>
+						<f:hidden path="replyDate"/>
+                     	 <f:hidden path="id"/>
+                   
+                      <input class="btn btn-primary" type="submit"  value="Submit"> 
+                       <input class="btn btn-primary" type="reset" value="reset">
+                       
+                      </fieldset>
+                      </div>
+                  </f:form>
                 </div>
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+               
+              </div>
+            </div>
+          </div>
 					<!-- partial:../../partials/_footer.html -->
-					<jsp:include page="footer.jsp"></jsp:include>
+				<jsp:include page="footer.jsp"></jsp:include>
 					<!-- partial -->
         </div>
         <!-- content-wrapper ends -->
@@ -285,9 +285,9 @@
   <!-- plugins:js -->
   <script src="adminResources/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
-  <!-- Plugin js for this <page--></page-->
-  <script src="adminResources/js/jquery.dataTables.js"></script>
-  <script src="adminResources/js/dataTables.bootstrap4.js"></script>
+  <!-- Plugin js for this page-->
+  <script src="adminResources/js/jquery.validate.min.js"></script>
+  <script src="adminResources/js/bootstrap-maxlength.min.js"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="adminResources/js/off-canvas.js"></script>
@@ -297,8 +297,13 @@
   <script src="adminResources/js/todolist.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="adminResources/js/data-table.js"></script>
+  <script src="adminResources/js/form-validation.js"></script>
+  <script src="adminResources/js/formValidations.js"></script>
+  <script src="adminResources/js/bt-maxLength.js"></script>
   <!-- End custom js for this page-->
 </body>
 
 </html>
+    
+    
+    

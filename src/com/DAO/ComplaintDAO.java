@@ -38,7 +38,7 @@ public class ComplaintDAO {
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
 			
-		Query q = Session.createQuery("from ComplaintVO where loginVO.role = 'ROLE_STAFF' ");
+		Query q = Session.createQuery("from ComplaintVO ");
 		
 		List ls=q.list();
 		transaction.commit();
@@ -61,6 +61,19 @@ public class ComplaintDAO {
 		Session Session = sessionfactory.openSession();
 		Query q = Session.createQuery("from ComplaintVO where id = " + complaintVO.getId());
 		List ls=q.list();
+		Session.close();
+		return ls;
+	}
+	
+public List searchUserComplaint(){
+		
+		Session Session = sessionfactory.openSession();
+		Transaction transaction = Session.beginTransaction();
+			
+		Query q = Session.createQuery("from ComplaintVO ");
+		
+		List ls=q.list();
+		transaction.commit();
 		Session.close();
 		return ls;
 	}
