@@ -7,7 +7,7 @@
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
           <span class="icon-menu"></span>
         </button>
-        <ul class="navbar-nav">
+       <!--  <ul class="navbar-nav">
           <li class="nav-item dropdown d-none d-lg-flex">
             <a class="nav-link dropdown-toggle nav-btn" id="actionDropdown" href="#" data-toggle="dropdown">
               <span class="btn">+ Create new</span>
@@ -29,7 +29,7 @@
               </a>
             </div>
           </li>
-        </ul>
+        </ul> -->
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown d-none d-lg-flex">
             <a class="nav-link dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown">

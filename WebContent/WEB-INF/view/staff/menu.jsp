@@ -8,17 +8,17 @@
                 </div>
                 <div class="profile-name">
                   <p class="name">
-                    Admin
+                    STAFF
                   </p>
                   <p class="designation">
-                    Admin
+                    Staff Member
 
                   </p>
                 </div>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="staff/index.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
                 

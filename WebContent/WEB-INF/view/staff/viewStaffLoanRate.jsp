@@ -37,9 +37,9 @@
 			<div class="row row-offcanvas row-offcanvas-right">
 				<!-- partial:../../partials/_settings-panel.html -->
 				<div class="theme-setting-wrapper">
-					<div id="settings-trigger">
+					<!-- <div id="settings-trigger">
 						<i class="mdi mdi-settings"></i>
-					</div>
+					</div> -->
 					<div id="theme-settings" class="settings-panel">
 						<i class="settings-close mdi mdi-close"></i>
 						<p class="settings-heading">SIDEBAR SKINS</p>
