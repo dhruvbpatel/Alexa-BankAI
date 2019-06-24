@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<base href="<%=request.getContextPath()%>/admin">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">

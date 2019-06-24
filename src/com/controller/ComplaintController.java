@@ -16,10 +16,12 @@ import org.springframework.web.servlet.ModelAndView;
 import com.DAO.ComplaintDAO;
 import com.DAO.LoanRateDAO;
 import com.DAO.LoanTypeDAO;
+import com.DAO.LoginDAO;
 import com.VO.ComplaintVO;
 import com.VO.LoanRateVO;
 import com.VO.LoanTypeVO;
 import com.VO.LoginVO;
+import com.util.BaseMethods;
 
 @Controller
 public class ComplaintController {
@@ -33,18 +35,24 @@ public class ComplaintController {
 	@Autowired
 	LoanRateDAO loanRateDAO;
 
+	@Autowired
+	LoginDAO loginDAO;
+	
 	@RequestMapping(value="loadAddComplaint.html",method=RequestMethod.GET)
 	public ModelAndView loadAddComplient()
 	{
-		return new  ModelAndView("admin/addComplaint","ComplaintVO",new ComplaintVO());
+		return new  ModelAndView("user/addComplaint","ComplaintVO",new ComplaintVO());
 		
 	}
 	
 	@RequestMapping(value="insertComplaint.html",method=RequestMethod.POST)
 	public ModelAndView insertMethod(@ModelAttribute ComplaintVO complaintVO,LoginVO loginVO)
 	{
-		loginVO.setId(11);
+		String name = BaseMethods.getUser(); 
+		List ls	=loginDAO.searchByName(name);
 		
+		loginVO = (LoginVO)ls.get(0);
+
 		Date d=new Date();
 
 		DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
@@ -116,10 +124,27 @@ public class ComplaintController {
 	@RequestMapping(value="viewOwnComplaint.html",method=RequestMethod.GET)
 	public ModelAndView viewOwnComplaint(@ModelAttribute ComplaintVO complaintVO)
 	{
-		List ls=complaintDAO.searchUserComplaint();
-		return new ModelAndView("staff/viewOwnComplaint","complaint",ls);	
+		
+		
+		String name = BaseMethods.getUser(); 
+		List ls	=loginDAO.searchByName(name);
+		
+		LoginVO loginVO = (LoginVO)ls.get(0);
+		List ls1=complaintDAO.searchOwnComplain(loginVO);
+		return new ModelAndView("staff/viewOwnComplaint","complaint",ls1);	
 	}
+
 	
+	@RequestMapping(value="viewUserOwnComplaint.html",method=RequestMethod.GET)
+	public ModelAndView viewUserComplaint(@ModelAttribute ComplaintVO complaintVO)
+	{
+		String name = BaseMethods.getUser(); 
+		List ls	=loginDAO.searchByName(name);
+		
+		LoginVO loginVO = (LoginVO)ls.get(0);
+		List ls1=complaintDAO.searchOwnComplain(loginVO);
+		return new ModelAndView("user/viewComplaint","complaint",ls1);	
+	}
 	
 
 	@RequestMapping(value="loadStaffAddComplaint.html",method=RequestMethod.GET)
@@ -142,7 +167,11 @@ public class ComplaintController {
 		DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 		
 		complaintVO.setStatus("PENDING");
-		loginVO.setId(11);
+		String name = BaseMethods.getUser(); 
+		List ls	=loginDAO.searchByName(name);
+		
+		loginVO = (LoginVO)ls.get(0);
+
 		complaintVO.setLoginVO(loginVO);
 		complaintVO.setComplaintDate(format.format(d));
 		

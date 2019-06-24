@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
-
+<base href="<%=request.getContextPath()%>/staff">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">

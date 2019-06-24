@@ -85,21 +85,6 @@
             </li>
             
             
-             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-                <i class="icon-flag menu-icon"></i>
-                <span class="menu-title">Manage Feedback</span>
-                <!-- <span class="badge badge-danger">3</span> -->
-              </a>
-              <div class="collapse" id="form-elements">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">View Feedback</a></li>
-                  <!-- <li class="nav-item"><a class="nav-link" href="pages/forms/advanced_elements.html">Advanced Elements</a></li>
-                  <li class="nav-item"><a class="nav-link" href="./validation.html">Validation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="pages/forms/wizard.html">Wizard</a></li -->
-                </ul>
-              </div>
-            </li>
             
             
             
@@ -154,6 +139,21 @@
               </div>
             </li>
            
-         
+
+
+
+             <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                <i class="icon-flag menu-icon"></i>
+                <span class="menu-title">Manage Feedback</span>
+                <!-- <span class="badge badge-danger">3</span> -->
+              </a>
+              <div class="collapse" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"><a class="nav-link" href="viewFeedback.html">View Feedback</a></li>
+                  
+                </ul>
+              </div>
+            </li>         
       
         </nav>
