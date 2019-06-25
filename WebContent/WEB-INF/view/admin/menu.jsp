@@ -18,7 +18,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/index.html">
+              <a class="nav-link" href="admin.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
                 
@@ -81,7 +81,7 @@
               </a>
               <div class="collapse" id="ui-advanced">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dragula.html">view Request</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="adminViewLoanRequest.html">view Request</a></li>
                  
                 </ul>
               </div>
@@ -96,7 +96,7 @@
               </a>
               <div class="collapse" id="form-elements">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">View Feedback</a></li>
+                  <li class="nav-item"><a class="nav-link" href="viewFeedback.html">View Feedback</a></li>
                   <!-- <li class="nav-item"><a class="nav-link" href="pages/forms/advanced_elements.html">Advanced Elements</a></li>
                   <li class="nav-item"><a class="nav-link" href="./validation.html">Validation</a></li>
                   <li class="nav-item"><a class="nav-link" href="pages/forms/wizard.html">Wizard</a></li -->

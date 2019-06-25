@@ -1,5 +1,8 @@
 package com.util;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -9,6 +12,10 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.multipart.MultipartFile;
+
 
 
 
@@ -16,6 +23,13 @@ import javax.mail.internet.MimeMessage;
 
 public class BaseMethods {
 
+	
+	public static String getUser(){
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String name = auth.getName(); 
+	    return name;
+	}
+	
 	public static void sendMail(String receiver,String securityKey,String userName){
 
 		final String from = "noreply.BankAI@gmail.com";
@@ -95,6 +109,25 @@ public class BaseMethods {
         } 
   
         return sb.toString(); 
+	}
+	
+	
+	public static void fileUpload(String fileName,String filePath,MultipartFile file){
+		
+		try {
+		
+			File f = new File(filePath);
+			System.out.println(f.mkdirs());
+			
+			BufferedOutputStream bos = new BufferedOutputStream (new FileOutputStream(filePath+"//"+fileName));
+			byte [] b = file.getBytes();
+			bos.write(b);
+			bos.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	

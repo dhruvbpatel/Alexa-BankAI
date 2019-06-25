@@ -1,0 +1,134 @@
+/* Responsive CSS Document */
+
+/* 
+    Project:        inobiz -  Business & Agency Template.
+    Version:        1.0
+    Last change:    23/02/2018.
+    Designed:       Template_mr
+    Developed:      Template_mr
+   
+*/
+
+@media (min-width: 992px) {
+  .container {padding-left: 0 !important;padding-right: 0 !important;}
+}
+@media (max-width: 1199px) {
+  .shop-details .single-product-details .product-order-details {width:100%;padding: 40px 0 0 0;}
+}
+/*(max-width: 1199px)*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #mega-menu-wrapper .nav>li>a {padding-left: 16px;padding-right: 16px;}
+  .our-service .single-service .text {padding-left: 30px;}
+  .consultation-help .section-part .col {max-width: 485px;}
+  .our-project .single-project .text {padding-left: 20px;}
+  .error-page .container:before {right: 0;}
+  .error-page .container:after {left:0;}
+  .shop-details .review-tab .nav-tabs > li > a {padding: 0 30px;}
+}
+
+/*(min-width: 992px) and (max-width: 1199px)*/
+
+@media (max-width: 991px) {
+  header .header-wrapper {padding: 15px 0 10px 0;}
+  #mega-menu-wrapper,.consultation-help .section-part {width: 100%;}
+  .header-wrapper .logo {position: absolute;top:15px;left:0;z-index: 9;}
+  #mega-menu-wrapper .nav li.quote a {margin: 0 15px 5px 15px;}
+  .theme-menu-wrapper.fixed .header-wrapper {padding: 10px 0 5px 0;}
+  .theme-title a {position: relative;top:auto;margin-top: 30px;}
+  .section-margin-bottom {margin-bottom: 60px;}
+  .section-margin-bottom-two {margin-bottom: 30px;}
+  .theme-sidebar,.shop-sidebar {margin-top: 60px;}
+  .consultation-help .consultation-form-wrapper {padding: 0;}
+  .consultation-help .consultation-form-wrapper form {margin-bottom: 40px;}
+  .consultation-help .section-part .col {float: none;margin: 0 auto;}
+  .consultation-help .text-wrapper .opacity {padding-left: 0;}
+  .client-section .our-partner h3 {margin: 40px 0 20px 0;}
+  .theme-footer .top-footer [class*="col-"] {margin-bottom: 40px;}
+  .theme-footer .bottom-footer {margin-top: 5px;}
+  .service-details .left-content {padding-top: 40px;}
+  .service-details .left-content img {margin: 0 auto;}
+  .error-page .container:after,.error-page .container:before {display: none;}
+  .error-page {padding: 0 0 80px 0;}
+  .error-page h4 {margin: 15px 0 80px 0;}
+  .details-page-overview h3 br {display: none;}
+  .project-details .project-onformation {margin-top: 40px;}
+} 
+/*(max-width: 991px)*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  header .top-header .social-icon li a {margin-left: 12px;}
+  .consultation-help .section-part .col {max-width: 720px;}
+  .shop-details .review-tab .nav-tabs > li > a {padding: 0 40px;}
+}
+
+/*(min-width: 768px) and (max-width: 991px)*/
+@media (max-width: 767px) {
+  .consultation-help .section-part .col {max-width: none;padding: 0 15px;}
+  .theme-menu-wrapper .top-header,header .top-header .social-icon {text-align: center;}
+  header .top-header .call a {margin: 15px 0;}
+  header .top-header .social-icon li a {margin: 0 8px;}
+  .consultant-banner .theme-button-one {float: none;margin-top: 20px;}
+  .theme-title p br,.contact-form p br {display: none;}
+  .bottom-banner .theme-button-one {float: none;margin-top: 30px;}
+  .bottom-banner {padding: 30px 0;}
+  .theme-footer h5 {margin-bottom: 20px;}
+  .theme-inner-banner .opacity {padding: 95px 0;}
+  .theme-inner-banner ul {padding: 22px 15px;}
+  .theme-inner-banner {margin-bottom: 100px;}
+  .shop-details .single-product-details img {width: 100%;}
+  .shop-details .review-tab .nav-tabs > li {width: 100%;margin-bottom: 5px;}
+  .blog-details .blog-title {padding-left: 15px;}
+  .blog-details .blog-post-data .text-wrapper {padding: 0 0 20px 0;}
+  .contact-form form {margin-top: 60px;}
+  .map-canvas {margin-top: 40px;}
+  #theme-main-banner p {font-size: 16px;}
+  #theme-main-banner h1 {font-size: 35px;margin: 10px 0;}
+  #theme-main-banner h3 {font-size: 22px;margin-bottom: 20px;}
+  #theme-main-banner a.theme-button-one,#theme-main-banner .text-center a.theme-button-one {margin-top: 15px;}
+  #theme-main-banner {height: 550px !important;}
+}
+/*(max-width: 767px)*/
+
+@media (max-width: 650px) {
+  #success, #error {
+    width: 86%;
+    height: auto;
+    top: calc(50% - 50px);
+    left: 7%;
+    padding: 30px 10px;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  .theme-inner-banner h2 {font-size: 35px;margin-top: 8px;}
+  .details-page-overview h3 {font-size: 24px;}
+}
+
+@media (max-width: 550px) {
+  .shop-page .shop-product .col-xs-6 {width: 100%;}
+  .our-blog.blog-list .single-blog .text .space-fix {padding-left: 15px;}
+}
+@media (max-width: 500px) {
+  .our-service .single-service .text,.our-project .single-project .text {padding-left: 10px;}
+  .theme-inner-banner ul {width: 100%;text-align: center;}
+}
+
+@media (max-width: 450px) {
+  .client-slider-content .wrapper {padding-right: 25px;}
+  .error-page strong {font-size: 90px;}
+  .blog-details .share-option .social-icon {position: relative;-webkit-transform:none;transform:none;left:auto;top:auto;text-align: center;margin-top: 25px;}
+}
+@media (max-width: 400px) {
+  .page-changer li {float: none;text-align: center;}
+  .our-team .col-xs-6 {width: 100%;}
+  .shop-details .single-product-details .product-order-details .clearfix a,
+  .shop-details .single-product-details .product-order-details .clearfix ul {float: none;}
+  .shop-details .single-product-details .product-order-details .clearfix a {margin-top: 15px;}
+  .blog-details .blog-post-data .author-data img {float: none;margin: 0 auto;}
+  .blog-details .blog-post-data .author-data .text {float: none;width: 100%;padding: 20px 0 0 0;}
+}
+@media (max-width: 380px) {
+  
+}

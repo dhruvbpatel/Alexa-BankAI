@@ -226,7 +226,7 @@
                 <div class="card-body">
                   <h4 class="card-title">Staff Register</h4>
                   <br>
-                  <f:form class="cmxform" id="signupForm" method="post" action="insertLoanStaff.html" modelAttribute="LoanStaffVO">
+                  <f:form class="cmxform" id="signupForm" method="post" action="admin/insertLoanStaff.html" modelAttribute="LoanStaffVO">
                     <fieldset>
                       <div class="form-group">
                         <label for="firstname">Firstname</label>

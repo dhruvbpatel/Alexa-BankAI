@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.VO.ComplaintVO;
 import com.VO.LoanTypeVO;
+import com.VO.LoginVO;
 
 
 @Repository
@@ -38,7 +39,20 @@ public class ComplaintDAO {
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
 			
-		Query q = Session.createQuery("from ComplaintVO ");
+		Query q = Session.createQuery("from ComplaintVO where loginVO.role='ROLE_STAFF'");
+		
+		List ls=q.list();
+		transaction.commit();
+		Session.close();
+		return ls;
+	}
+	
+	public List searchOwnComplain(LoginVO loginVO){
+		
+		Session Session = sessionfactory.openSession();
+		Transaction transaction = Session.beginTransaction();
+			
+		Query q = Session.createQuery("from ComplaintVO where loginVO.id="+loginVO.getId());
 		
 		List ls=q.list();
 		transaction.commit();
@@ -70,7 +84,7 @@ public List searchUserComplaint(){
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
 			
-		Query q = Session.createQuery("from ComplaintVO ");
+		Query q = Session.createQuery("from ComplaintVO where loginVO.role='ROLE_USER'");
 		
 		List ls=q.list();
 		transaction.commit();
