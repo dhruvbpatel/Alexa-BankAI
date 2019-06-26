@@ -1,7 +1,7 @@
 <%@page import="com.sun.research.ws.wadl.Request"%>
 <div class="header-wrapper clearfix">
 						<!-- Logo -->
-						<div class="logo float-left"><a href="index-2.html"><img src="userResources/images/logo/AI.png" alt="logo"></a></div>
+						<div class="logo float-left"><a href="user.html"><img src="userResources/images/logo/AI.png" alt="logo"></a></div>
 
 						<!-- ============================ Theme Menu ========================= -->
 						<nav class="theme-main-menu navbar float-right" id="mega-menu-wrapper">
@@ -59,7 +59,7 @@
 									<!-- <li class="dropdown-holder"><a href="#" class="tran3s">Feedback</a>
 										
 									</li>  -->
-									<li><a href="loadTeam.html" class="tran3s">Our Team</a></li>
+									<li><a href="loadUserTeam.html" class="tran3s">Our Team</a></li>
 									<li class="quote"><a href="j_spring_security_logout" class="tran3s">Logout</a></li>
 								</ul>
 						   </div><!-- /.navbar-collapse -->

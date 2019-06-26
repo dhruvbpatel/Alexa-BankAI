@@ -25,12 +25,12 @@
 			Our aim is to make the process of loan application so easy and fast so that in no time you can get loan and boost your business and life. </p>
 				<h5>Follow us</h5>
 				<ul>
-					<li><a href="https://www.facebook.com/people/Dhruv-Patel/100003776960880" class="tran3s"><i class="fa fa-facebook"
+					<li><a target="_blank" href="https://www.facebook.com/people/Dhruv-Patel/100003776960880" class="tran3s"><i class="fa fa-facebook"
 							aria-hidden="true"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/dhruv-patel-1057/" class="tran3s"><i class="fa fa-linkedin"
+					<li><a target="_blank" href="https://www.linkedin.com/in/dhruv-patel-1057/" class="tran3s"><i class="fa fa-linkedin"
 							aria-hidden="true"></i></a></li>
 
-					<li><a href="https://twitter.com/dhruvhimself" class="tran3s"><i class="fa fa-twitter"
+					<li><a target="_blank" href="https://twitter.com/dhruvhimself" class="tran3s"><i class="fa fa-twitter"
 							aria-hidden="true"></i></a></li>
 
 				</ul>

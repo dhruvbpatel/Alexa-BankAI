@@ -8,7 +8,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Victory Admin</title>
+  		<title>BankAI -Automated Loan Application System</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="adminResources/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="adminResources/css/simple-line-icons.css">
@@ -23,7 +23,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="adminResources/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="adminResources/images/favicon.png" />
+  <link rel="shortcut icon" href="adminResources/images/AI.png" />
 </head>
 <body>
   <div class="container-scroller">
@@ -59,8 +59,8 @@
             </div>
           </div>
         </div>
-        <div id="right-sidebar" class="settings-panel">
-          <i class="settings-close mdi mdi-close"></i>
+         <div id="right-sidebar" class="settings-panel">
+           <i class="settings-close mdi mdi-close"></i>
           <ul class="nav nav-tabs" id="setting-panel" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
@@ -145,7 +145,7 @@
                 <p class="text-gray mb-0 ">Call Sarah Graves</p>
               </div>
             </div>
-            <!-- To do section tab ends -->
+            To do section tab ends
             <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
               <div class="d-flex align-items-center justify-content-between border-bottom">
                 <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
@@ -205,11 +205,10 @@
                 </li>
               </ul>
             </div>
-            <!-- chat tab ends -->
+            chat tab ends
           </div>
-        </div>
-        <!-- partial -->
-        <!-- partial:partials/_sidebar.html -->
+        </div> 
+
 
 
 
@@ -380,7 +379,7 @@
               </div>
             </div>
           </div>
-          <div class="row grid-margin">
+          <!-- <div class="row grid-margin">
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
@@ -468,7 +467,8 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
+          
           <div class="row">
             <div class="col-12 grid-margin">
               <div class="card">
@@ -483,7 +483,8 @@
               </div>
             </div>
           </div>
-          <div class="row">
+         <!--  <div class="row">
+         
             <div class="col-md-6 col-lg-4 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -568,8 +569,12 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
+          </div> -->
+          
+          
+        <!--   <div class="row">
+          
+          
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body pb-0">
@@ -711,7 +716,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
+
+
           <div class="row">
             <div class="col-md-4 grid-margin">
               <div class="card">
@@ -753,7 +760,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+       <!--    <div class="row">
             <div class="col-md-4 grid-margin">
               <div class="card">
                 <div class="card-body">
@@ -796,7 +803,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- partial:partials/_footer.html -->
          <jsp:include page="footer.jsp"></jsp:include>
           <!-- partial -->

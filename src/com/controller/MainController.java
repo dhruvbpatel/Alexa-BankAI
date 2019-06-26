@@ -92,4 +92,10 @@ public class MainController
 		return new  ModelAndView("user/team");
 		
 	}
+	
+	@RequestMapping(value="loadUserTeam.html",method=RequestMethod.GET)
+	public ModelAndView loadUserTeam(){
+		return new ModelAndView("user/userTeam");
+	}
+	
 }

@@ -1,7 +1,7 @@
 <div class="header-wrapper clearfix">
 						<!-- Logo -->
 						<div class="logo float-left">
-						<a href="index-2.html">
+						<a href="index.html">
 							<img src="userResources/images/logo/AI.png" alt="Logo">
 						</a>
 						</div>

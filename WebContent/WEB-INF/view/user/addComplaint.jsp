@@ -12,7 +12,7 @@
 		<!-- For Resposive Device -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>inobiz -  Business & Agency Template</title>
+				<title>BankAI -Automated Loan Application System</title>
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
@@ -121,9 +121,9 @@
 									<f:form action="insertComplaint.html" method="POST" modelAttribute="ComplaintVO" >
 										<div class="row">
 											<div>
-												<f:input type="text" path="complaintSubject" plceholder="Subject"/>
+												<f:input type="text" path="complaintSubject" plceholder="Subject" placeholder="Subject"/>
 												
-												<f:textarea path="complaintDescrption"/>	
+												<f:textarea path="complaintDescrption" placeholder="Description"/>	
 											</div>
 											
 											

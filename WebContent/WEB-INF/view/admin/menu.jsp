@@ -2,8 +2,9 @@
           <ul class="nav">
             <li class="nav-item nav-profile">
               <div class="nav-link">
-                <div class="profile-image">
-                  <img src="adminResources/images/fadmin.jpg" alt="image"/>
+                <!-- <div class="profile-image"> -->
+                 <div style="padding-left:75px">
+                  <img src="adminResources/images/admin.png" alt="image"/>
                   <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
                 </div>
                 <div class="profile-name">
