@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from themazine.com/html/inobiz/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 May 2019 08:35:13 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<meta charset="UTF-8">
@@ -14,7 +13,7 @@
 		<!-- For Resposive Device -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>inobiz -  Business & Agency Template</title>
+		<title>BankAI -Automated Loan Application System</title>
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="userResources/images/fav-icon/icon.png">
@@ -26,13 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="./userResources/css/responsive.css">
 
 
-		<!-- Fix Internet Explorer ______________________________________-->
 
-		<!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="vendor/html5shiv.js"></script>
-			<script src="vendor/respond.js"></script>
-		<![endif]-->
 
 
 	</head>
@@ -72,37 +65,38 @@
 				<div data-src="userResources/images/home/slide-1.jpg">
 					<div class="camera_caption">
 						<div class="container">
-							<p class="wow fadeInUp animated">Inpire Your Business</p>
-							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">START CREATE YOUR</h1>
-							<h3 class="wow fadeInUp animated p-color" data-wow-delay="0.4s">b2b BUSINESS Together</h3>
+							<p class="wow fadeInUp animated">Inspire Your Business</p>
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Get Easy Loans</h1>
+							<h3 class="wow fadeInUp animated p-color" data-wow-delay="0.4s">Grow Together</h3>
 							<a href="#" class="wow fadeInLeft animated theme-button-one button-fill" data-wow-delay="0.6s">Get More</a>
 							<a href="contact.html" class="wow fadeInRight animated theme-button-one" data-wow-delay="0.6s">Contact us</a>
 						</div> <!-- /.container -->
 					</div> <!-- /.camera_caption -->
 				</div>
-				<div data-src="userResources/images/home/slide-2.jpg">
+				<div data-src="userResources/images/home/slide-1.jpg">
 					<div class="camera_caption">
 						<div class="container">
-							<p class="wow fadeInUp animated">Inpire Your Business</p>
-							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">START CREATE YOUR</h1>
-							<h3 class="wow fadeInUp animated p-color" data-wow-delay="0.4s">b2b BUSINESS Together</h3>
+							<p class="wow fadeInUp animated">Inspire Your Business</p>
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Get Easy Loans</h1>
+							<h3 class="wow fadeInUp animated p-color" data-wow-delay="0.4s">Grow Together</h3>
 							<a href="#" class="wow fadeInLeft animated theme-button-one button-fill" data-wow-delay="0.6s">Get More</a>
 							<a href="contact.html" class="wow fadeInRight animated theme-button-one" data-wow-delay="0.6s">Contact us</a>
 						</div> <!-- /.container -->
 					</div> <!-- /.camera_caption -->
 				</div>
-				<div data-src="userResources/images/home/slide-3.jpg">
+				<div data-src="userResources/images/home/slide-1.jpg">
 					<div class="camera_caption">
 						<div class="container">
-							<p class="wow fadeInUp animated">Inpire Your Business</p>
-							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">START CREATE YOUR</h1>
-							<h3 class="wow fadeInUp animated p-color" data-wow-delay="0.4s">b2b BUSINESS Together</h3>
+							<p class="wow fadeInUp animated">Inspire Your Business</p>
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Get Easy Loans</h1>
+							<h3 class="wow fadeInUp animated p-color" data-wow-delay="0.4s">Grow Together</h3>
 							<a href="#" class="wow fadeInLeft animated theme-button-one button-fill" data-wow-delay="0.6s">Get More</a>
 							<a href="contact.html" class="wow fadeInRight animated theme-button-one" data-wow-delay="0.6s">Contact us</a>
 						</div> <!-- /.container -->
 					</div> <!-- /.camera_caption -->
 				</div>
 			</div> <!-- /#theme-main-banner -->
+			
 
 
 
@@ -111,33 +105,93 @@
 				Our Service
 			==============================================
 			-->
+			<div class="theme-title">
+						<h2 style="padding-left: 100px;">Our Loans</h2>
+						
+					</div> 
 			<div class="our-service section-margin-bottom-two">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<div class="single-service">
 								<div class="text">
-									<h4><a href="#">Top Services</a> <span>01</span></h4>
-									<p>Interdum iusto pulvinar consequuntur augue optio repellat fuga  Purus expedita fusce temp oribus.</p>
+									<h4><a href="#">Home Loans</a> <span>01</span></h4>
+									<p>
+									<ul>
+									<li>Flexible Repayment Options</li>
+									 <li>Quick ProcessingFree</li>
+									  <li> Safe Document Storage</li>
+									  <li>Wide Range of Home Loan Product</li>
+									</ul></p>
 								</div> <!-- /.text -->
 							</div> <!-- /.single-service -->
 						</div> <!-- /.col- -->
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<div class="single-service">
 								<div class="text">
-									<h4><a href="#">Business Consulting</a> <span>02</span></h4>
-									<p>Interdum iusto pulvinar consequuntur augue optio repellat fuga  Purus expedita fusce temp oribus.</p>
+									<h4><a href="#">Business Loans</a> <span>02</span></h4>
+									<ul>
+									<li>Flexible Repayment Options</li>
+									 <li>Quick Disbursals</li>
+									  <li> Complete Transparency</li>
+									  <li>No Security Required</li>
 								</div> <!-- /.text -->
 							</div> <!-- /.single-service -->
 						</div> <!-- /.col- -->
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<div class="single-service">
 								<div class="text">
-									<h4><a href="#">Expert Team Mates</a> <span>03</span></h4>
-									<p>Interdum iusto pulvinar consequuntur augue optio repellat fuga  Purus expedita fusce temp oribus.</p>
+									<h4><a href="#">Car Loans</a> <span>03</span></h4>
+									<ul>
+									<li>Flexible Repayment Options</li>
+									 <li>7 Year Loan Tenure</li>
+									  <li> Up to 100% Funding</li>
+									  <li>2% Lower Interest Rates</li>
 								</div> <!-- /.text -->
 							</div> <!-- /.single-service -->
 						</div> <!-- /.col- -->
+						
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="single-service">
+								<div class="text">
+									<h4><a href="#">Educational Loans</a> <span>04</span></h4>
+									<ul>
+									<li>Flexible Repayment Options</li>
+									 <li>Avail Tax Benefits under section 80 (E)</li>
+									  <li>Insurance Cover</li>
+									  <li>Doorstep Service</li>
+								</div> <!-- /.text -->
+							</div> <!-- /.single-service -->
+						</div> <!-- /.col- -->
+						
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="single-service">
+								<div class="text">
+									<h4><a href="#">Gold Loans</a> <span>05</span></h4>
+									<ul>
+									<li>Minimal Documentation</li>
+									 <li>Disbusral in 45 Minutes</li>
+									  <li>Secure</li>
+									  <li>Flexible rate of interest</li>
+								</div> <!-- /.text -->
+							</div> <!-- /.single-service -->
+						</div> <!-- /.col- -->
+					
+					
+					<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="single-service">
+								<div class="text">
+									<h4><a href="#">Personal Loans</a> <span>06</span></h4>
+									<ul>
+									<li>Simplified Documentation</li>
+									 <li>Personal Loan Disbursal in 4 Hours*</li>
+									  <li> Competitive Pricing</li>
+									  <li>Transparent Processing</li>
+								</div> <!-- /.text -->
+							</div> <!-- /.single-service -->
+						</div> <!-- /.col- -->
+						
+						
 					</div> <!-- /.row -->
 				</div> <!-- /.container -->
 			</div> <!-- /.our-service -->
@@ -148,64 +202,8 @@
 				Consultant Banner
 			==============================================
 			-->
-			<div class="consultant-banner section-margin-bottom">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-9 col-sm-8 col-xs-12">
-							<h3>Are You Ready for the Talent Consultant ?</h3>
-							<p>How workforce development programs turn talent puddles into talent pools , Hiring isn’t easy. Employers might get hundreds </p>
-						</div> <!-- /.col- -->
-						<div class="col-md-3 col-sm-4 col-xs-12">
-							<a href="#" class="theme-button-one float-right">Try It Now</a>
-						</div>
-					</div> <!-- /.row -->
-				</div> <!-- /.container -->
-			</div> <!-- /.consultant-banner -->
-
-
-			<!--
-			=============================================
-				Our Service
-			==============================================
-			-->
-			<div class="our-service section-margin-bottom-two">
-				<!-- <div class="container">
-					<div class="theme-title">
-						<h2>Business Services</h2>
-						<p>How workforce development programs turn talent puddles into talent pools , Hiring isn’t easy. Employers <br> might get hundreds </p>
-						<a href="service.html" class="theme-button-one">See More Services</a>
-					</div> /.theme-title
-					<div class="row">
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-service">
-								<div class="image"><img src="userResources/images/service/1.jpg" alt=""></div>
-								<div class="text">
-									<h4><a href="service-details.html">Business Accounting</a> <i class="flaticon-pie-chart"></i></h4>
-									<p>Interdum iusto pulvinar consequuntur augue optio repellat fuga  Purus expedita fusce temp oribus.</p>
-								</div> /.text
-							</div> /.single-service
-						</div> /.col-
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-service">
-								<div class="image"><img src="userResources/images/service/2.jpg" alt=""></div>
-								<div class="text">
-									<h4><a href="service-details.html">Business Consulting</a> <i class="flaticon-upload"></i></h4>
-									<p>Interdum iusto pulvinar consequuntur augue optio repellat fuga  Purus expedita fusce temp oribus.</p>
-								</div> /.text
-							</div> /.single-service
-						</div> /.col-
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-service">
-								<div class="image"><img src="userResources/images/service/3.jpg" alt=""></div>
-								<div class="text">
-									<h4><a href="service-details.html">Expert Team Mates</a> <i class="flaticon-devices"></i></h4>
-									<p>Interdum iusto pulvinar consequuntur augue optio repellat fuga  Purus expedita fusce temp oribus.</p>
-								</div> /.text
-							</div> /.single-service
-						</div> /.col-
-					</div> /.row
-				</div> /.container -->
-			</div> <!-- /.our-service -->
+			
+		
 
 
 			<!--
@@ -213,41 +211,20 @@
 				Consultation Help
 			==============================================
 			-->
-			<div class="consultation-help clearfix section-margin-bottom">
-				<div class="container">
-					<div class="theme-title">
-						<h2>Request a Free Consultation</h2>
-						<p>How workforce development programs turn talent puddles into talent pools , Hiring isn’t easy. Employers <br> might get hundreds </p>
-					</div> <!-- /.theme-title -->
-				</div> <!-- /.container -->
-				<div class="clearfix">
-					
-
-					<div class="section-part float-left text-wrapper">
-						<div class="opacity clearfix">
-							<div class="col float-left">
-								<h3>27 Years of <br>Experience in <span class="p-color">Finance</span> <br>&amp; Business</h3>
-								<p>Hiring isn’t easy. Employers might get hundreds — sometimes thousands — of resumes for a single open position and still, somehow, hire the wrong </p>
-								<a href="service.html" class="theme-button-one">See Services</a>
-							</div> <!-- /.col -->
-						</div> <!-- /.opacity -->
-					</div> <!-- /.section-part -->
-				</div>
-			</div> <!-- /.consultation-help -->
-
+			
 
 			<!--
 			=============================================
 				Our Project
 			==============================================
 			-->
-			<div class="our-project section-margin-bottom-two">
+			<!-- <div class="our-project section-margin-bottom-two">
 				<div class="container">
 					<div class="theme-title">
 						<h2>Our Projects</h2>
 						<p>How workforce development programs turn talent puddles into talent pools , Hiring isn’t easy. Employers <br> might get hundreds </p>
 						<a href="project.html" class="theme-button-one">See More Projects</a>
-					</div> <!-- /.theme-title -->
+					</div> /.theme-title
 
 					<div class="row">
 						<div class="col-md-4 col-sm-6 col-xs-12">
@@ -256,9 +233,9 @@
 								<div class="text">
 									<h4><a href="project-details.html">Inobiz Business Inc.</a> <i class="flaticon-pie-chart"></i></h4>
 									<p>Accounting, Idea</p>
-								</div> <!-- /.text -->
-							</div> <!-- /.single-project -->
-						</div> <!-- /.col- -->
+								</div> /.text
+							</div> /.single-project
+						</div> /.col-
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<div class="single-project">
 								<div class="image"><img src="userResources/images/project/2.jpg" alt=""></div>
@@ -266,151 +243,33 @@
 								<div class="text">
 									<h4><a href="project-details.html">Chanze Renovation Inc.</a> <i class="flaticon-clipboard"></i></h4>
 									<p>Business, Idea</p>
-								</div> <!-- /.text -->
-							</div> <!-- /.single-project -->
-						</div> <!-- /.col- -->
+								</div> /.text
+							</div> /.single-project
+						</div> /.col-
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<div class="single-project">
 								<div class="image"><img src="userResources/images/project/3.jpg" alt=""></div>
 								<div class="text">
 									<h4><a href="project-details.html">Cllo Financial Inc.</a> <i class="flaticon-puzzle"></i></h4>
 									<p>Services, Idea</p>
-								</div> <!-- /.text -->
-							</div> <!-- /.single-project -->
-						</div> <!-- /.col- -->
-					</div> <!-- /.row -->
-				</div> <!-- /.container -->
-			</div> <!-- /.our-project -->
+								</div> /.text
+							</div> /.single-project
+						</div> /.col-
+					</div> /.row
+				</div> /.container
+			</div> /.our-project
+ -->
 
 
-
-			<!--
-			=============================================
-				Client Section
-			==============================================
-			-->
-			<div class="client-section section-margin-bottom">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7 col-xs-12">
-							<div class="client-slider-content">
-								<h3>Clients Say</h3>
-								<div class="client-slider">
-									<div class="item">
-										<div class="wrapper">
-											<div class="name">
-												<p>Mahfuz Riad <span>( CEO )</span></p>
-												<div class="icon"><img src="userResources/images/logo/icon1.png" alt=""></div>
-											</div>
-											<div class="text">
-												<h5>Great Service Inobiz </h5>
-												<p>Incredibly easy to use them and extremely versatile! This is one of the best quality themes I have purchased. I’m impressed with the features. Of note, customer service was very friendly,</p>
-											</div>
-										</div> <!-- /.wrapper -->
-									</div> <!-- /.item -->
-									<div class="item">
-										<div class="wrapper">
-											<div class="name">
-												<p>Mahfuz Riad <span>( CEO )</span></p>
-												<div class="icon"><img src="userResources/images/logo/icon1.png" alt=""></div>
-											</div>
-											<div class="text">
-												<h5>Great Service Inobiz </h5>
-												<p>Incredibly easy to use them and extremely versatile! This is one of the best quality themes I have purchased. I’m impressed with the features. Of note, customer service was very friendly,</p>
-											</div>
-										</div> <!-- /.wrapper -->
-									</div> <!-- /.item -->
-									<div class="item">
-										<div class="wrapper">
-											<div class="name">
-												<p>Mahfuz Riad <span>( CEO )</span></p>
-												<div class="icon"><img src="userResources/images/logo/icon1.png" alt=""></div>
-											</div>
-											<div class="text">
-												<h5>Great Service Inobiz </h5>
-												<p>Incredibly easy to use them and extremely versatile! This is one of the best quality themes I have purchased. I’m impressed with the features. Of note, customer service was very friendly,</p>
-											</div>
-										</div> <!-- /.wrapper -->
-									</div> <!-- /.item -->
-								</div> <!-- /.client-slider -->
-							</div> <!-- /.client-slider-content -->
-						</div> <!-- /.col- -->
-
-						<div class="col-md-5 col-xs-12">
-							<div class="our-partner">
-								<h3>Our Partner</h3>
-								<div class="row">
-									<div class="col-md-6 col-sm-3 col-xs-6"><img src="userResources/images/logo/p1.jpg" alt=""></div>
-									<div class="col-md-6 col-sm-3 col-xs-6"><img src="userResources/images/logo/p2.jpg" alt=""></div>
-									<div class="col-md-6 col-sm-3 col-xs-6"><img src="userResources/images/logo/p3.jpg" alt=""></div>
-									<div class="col-md-6 col-sm-3 col-xs-6"><img src="userResources/images/logo/p4.jpg" alt=""></div>
-								</div>
-							</div> <!-- /.our-partner -->
-						</div> <!-- /.col- -->
-					</div> <!-- /.row -->
-				</div> <!-- /.container -->
-			</div> <!-- /.client-section -->
-
-
-
-			<!--
-			=============================================
-				Our Blog
-			==============================================
-			-->
-			<div class="our-blog section-margin-bottom-two">
-				<div class="container">
-					<div class="theme-title">
-						<h2>Our News</h2>
-						<p>Our newst facts from our media office, programs turn talent puddles into talent pools , Hiring isn’t <br> easy. Employers might get hundreds </p>
-						<a href="blog-grid.html" class="theme-button-one">See More News</a>
-					</div> <!-- /.theme-title -->
-					<div class="row">
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-blog">
-								<div class="image"><img src="userResources/images/blog/1.jpg" alt=""></div>
-								<div class="text">
-									<div class="date">20 February 2017</div>
-									<h4><a href="blog-details.html">Inobiz  Business Inc report</a></h4>
-									<a href="#" class="author">By Mahfuz Riad</a>
-									<a href="blog-details.html" class="view-more"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-								</div>
-							</div> <!-- /.single-blog -->
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-blog">
-								<div class="image"><img src="userResources/images/blog/2.jpg" alt=""></div>
-								<div class="text">
-									<div class="date">20 February 2017</div>
-									<h4><a href="blog-details.html">Inobiz  Business Inc report</a></h4>
-									<a href="#" class="author">By Mahfuz Riad</a>
-									<a href="blog-details.html" class="view-more"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-								</div>
-							</div> <!-- /.single-blog -->
-						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-blog">
-								<div class="image"><img src="userResources/images/blog/3.jpg" alt=""></div>
-								<div class="text">
-									<div class="date">20 February 2017</div>
-									<h4><a href="blog-details.html">Inobiz  Business Inc report</a></h4>
-									<a href="#" class="author">By Mahfuz Riad</a>
-									<a href="blog-details.html" class="view-more"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-								</div>
-							</div> <!-- /.single-blog -->
-						</div>
-					</div> <!-- /.row -->
-				</div> <!-- /.container -->
-			</div> <!-- /.our-blog -->
-
+			
 
 			<!--
 			=============================================
 				Bottom Banner
 			==============================================
 			-->
-			<div class="bottom-banner">
-				<!-- <div class="container">
+			<!-- <div class="bottom-banner">
+				<div class="container">
 					<div class="row">
 						<div class="col-md-9 col-sm-8 col-xs-12">
 							<h3>If you have any querry for related Business… Just touch on this button</h3>
@@ -419,8 +278,8 @@
 							<a href="contact.html" class="theme-button-one float-right">Contact us</a>
 						</div>
 					</div>
-				</div> /.container -->
-			</div> <!-- /.bottom-banner -->
+				</div> /.container
+			</div> /.bottom-banner -->
 
 
 			<!--

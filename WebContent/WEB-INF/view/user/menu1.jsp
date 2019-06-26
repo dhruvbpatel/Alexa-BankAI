@@ -1,7 +1,7 @@
 <%@page import="com.sun.research.ws.wadl.Request"%>
 <div class="header-wrapper clearfix">
 						<!-- Logo -->
-						<div class="logo float-left"><a href="index-2.html"><img src="<%=request.getContextPath() %>userResources/images/logo/lo.jpg" alt="Logo"></a></div>
+						<div class="logo float-left"><a href="index-2.html"><img src="userResources/images/logo/AI.png" alt="logo"></a></div>
 
 						<!-- ============================ Theme Menu ========================= -->
 						<nav class="theme-main-menu navbar float-right" id="mega-menu-wrapper">

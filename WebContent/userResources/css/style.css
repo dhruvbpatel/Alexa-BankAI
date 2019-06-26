@@ -375,7 +375,7 @@ header .header-wrapper {padding: 45px 0 35px 0;position: relative;}
   text-align: center;
 }
 .bootstrap-select.btn-group .dropdown-toggle .bs-caret:before {
-  content: '';
+  content: 'ï„ƒ';
   font-family: 'font-awesome';
   color: rgba(0,0,0,0.6);
   font-size: 16px;
@@ -903,7 +903,7 @@ header .header-wrapper {padding: 45px 0 35px 0;position: relative;}
   padding: 19px 57px 19px 0;
 }
 .faq-page .panel-heading h5 a:before {
-  content: '';
+  content: 'ï�¢';
   position: absolute;
   font-family: 'font-awesome';
   width: 56px;
@@ -911,10 +911,10 @@ header .header-wrapper {padding: 45px 0 35px 0;position: relative;}
   top:0;
   right: 0;
   line-height: 64px;
-  color: #fff;
+  color: #fff; 	
   font-size: 12px;
 }
-.faq-page .panel-heading.active-panel h5 a:before {content: '';}
+.faq-page .panel-heading.active-panel h5 a:before {content: 'ï�£';}
 .faq-page .faq-panel .panel-body {
   border: 1px solid #edecec;
   border-top: none !important;

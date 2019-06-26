@@ -231,7 +231,7 @@
 							<div class="sidebar-partner-slider">
 								<div class="item">
 <!-- 									<img src="images/home/4.jpg" alt=""> -->
-									<h6>Joan Riad</h6>
+								<!-- 	<h6>Joan Riad</h6>
 									<p>Duis autem vel eum iriure dolor in hendrerit in vulput ate velit esse molestie consequat, vel illum dolore eu feugiat nulla</p>
 								</div>
 								<div class="item">
@@ -239,9 +239,9 @@
 									<h6>Joan Munna</h6>
 									<p>Duis autem vel eum iriure dolor in hendrerit in vulput ate velit esse molestie consequat, vel illum dolore eu feugiat nulla</p>
 								</div>
-							</div> /.sidebar-partner-slider
-						</div> /.theme-sidebar
- -->
+							</div> 
+						</div>  -->
+ 
 				</div>
 				<!-- /.row -->
 			</div>

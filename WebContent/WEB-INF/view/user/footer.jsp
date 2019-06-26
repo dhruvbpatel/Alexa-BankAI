@@ -19,24 +19,20 @@
 	<div class="container">
 		<div class="top-footer row">
 			<div class="col-md-6 col-sm-6 col-xs-12 footer-logo">
-				<a href="#"><img src="userResources/images/logo/logo.png"
+				<a href="#"><img src="userResources/images/logo/AI.png"
 					alt="Logo"></a>
-				<p>We create business coaches and trainers, individual
-					therapists, diet and nutrition consultants, as well as other
-					specialists who need a personal website, Check our latest work in
-					profile . . . .</p>
+				<p>We provide a safe and fast platform for your loan applications and get quick approval.
+			Our aim is to make the process of loan application so easy and fast so that in no time you can get loan and boost your business and life. </p>
 				<h5>Follow us</h5>
 				<ul>
-					<li><a href="#" class="tran3s"><i class="fa fa-facebook"
+					<li><a href="https://www.facebook.com/people/Dhruv-Patel/100003776960880" class="tran3s"><i class="fa fa-facebook"
 							aria-hidden="true"></i></a></li>
-					<li><a href="#" class="tran3s"><i class="fa fa-linkedin"
+					<li><a href="https://www.linkedin.com/in/dhruv-patel-1057/" class="tran3s"><i class="fa fa-linkedin"
 							aria-hidden="true"></i></a></li>
-					<li><a href="#" class="tran3s"><i class="fa fa-dribbble"
+
+					<li><a href="https://twitter.com/dhruvhimself" class="tran3s"><i class="fa fa-twitter"
 							aria-hidden="true"></i></a></li>
-					<li><a href="#" class="tran3s"><i class="fa fa-twitter"
-							aria-hidden="true"></i></a></li>
-					<li><a href="#" class="tran3s"><i class="fa fa-vimeo"
-							aria-hidden="true"></i></a></li>
+
 				</ul>
 			</div>
 			<!-- /.footer-logo -->
