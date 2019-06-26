@@ -7,7 +7,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Victory Admin</title>
+  <title>BankAI -Automated Loan Application System</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="adminResources/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="adminResources/css/simple-line-icons.css">
@@ -22,7 +22,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="adminResources/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="adminResources/images/favicon.png" />
+  <link rel="shortcut icon" href="adminResources/images/AI.png" />
 </head>
 <body>
   <div class="container-scroller">
@@ -379,7 +379,7 @@
               </div>
             </div>
           </div>
-          <div class="row grid-margin">
+         <!--  <div class="row grid-margin">
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
@@ -467,7 +467,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="row">
             <div class="col-12 grid-margin">
               <div class="card">
@@ -482,7 +482,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+        <!--   <div class="row">
             <div class="col-md-6 col-lg-4 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -567,8 +567,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
+          </div> -->
+          
+  <!--         <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body pb-0">
@@ -710,7 +711,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="row">
             <div class="col-md-4 grid-margin">
               <div class="card">
@@ -752,7 +753,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+         <!--  <div class="row">
             <div class="col-md-4 grid-margin">
               <div class="card">
                 <div class="card-body">
@@ -795,7 +796,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- partial:partials/_footer.html -->
          <jsp:include page="footer.jsp"></jsp:include>
           <!-- partial -->

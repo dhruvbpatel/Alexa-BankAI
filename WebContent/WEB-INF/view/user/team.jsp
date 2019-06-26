@@ -99,9 +99,9 @@
 											<h6><a href="#">Vedant Patel</a></h6>
 											<p>Intern</p>
 											<ul class="social-icon">
-												<li><a href="#" class="tran3s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-												<li><a href="#" class="tran3s"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-												<li><a href="#" class="tran3s"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+												<li><a href="#" target="_blank" class="tran3s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+												<li><a href="#" target="_blank" class="tran3s"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+												<li><a href="#" target="_blank" class="tran3s"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
 											</ul>
 										</div>
 									</div> <!-- /.single-team-member -->
@@ -114,9 +114,9 @@
 											<h6><a href="#">Dhruv Patel</a></h6>
 											<p>Intern</p>
 											<ul class="social-icon">
-												<li><a href="#" class="tran3s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-												<li><a href="#" class="tran3s"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-												<li><a href="#" class="tran3s"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+												<li><a href="https://www.facebook.com/profile.php?id=100003776960880" target="_blank" class="tran3s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+												<li><a href="https://twitter.com/dhruvhimself" target="_blank" class="tran3s"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+												<li><a href="mailto:dhruvpatel1057@gmail.com" target="_blank" class="tran3s"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
 											</ul>
 										</div>
 									</div> <!-- /.single-team-member -->
@@ -128,9 +128,9 @@
 											<h6><a href="#">Saurin Patel</a></h6>
 											<p>Intern</p>
 											<ul class="social-icon">
-												<li><a href="#" class="tran3s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-												<li><a href="#" class="tran3s"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-												<li><a href="#" class="tran3s"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+												<li><a href="#" target="_blank" class="tran3s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+												<li><a href="#" target="_blank" class="tran3s"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+												<li><a href="#" target="_blank" class="tran3s"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
 											</ul>
 										</div>
 									</div> <!-- /.single-team-member -->
@@ -156,7 +156,7 @@
 									<p>Softvan.in</p>
 								</div>
 								<div class="item">
-									<img src="userResources/images/home/5.jpg" alt="">
+									<img src="userResources/images/home/d.jpg" alt="">
 									<h6>Dhruv Patel</h6>
 									<p>Softvan.in</p>
 								</div>

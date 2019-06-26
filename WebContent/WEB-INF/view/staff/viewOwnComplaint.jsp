@@ -8,7 +8,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>BankAI Admin</title>
+  <title>BankAI -Automated Loan Application System</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="adminResources/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="adminResources/css/simple-line-icons.css">
@@ -22,7 +22,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="adminResources/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="adminResources/images/favicon.png" />
+  <link rel="shortcut icon" href="adminResources/images/AI.png" />
 </head>
 
 <body>

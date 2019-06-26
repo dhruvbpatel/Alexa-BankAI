@@ -7,7 +7,7 @@
 						button and contant us</h3>
 				</div>
 				<div class="col-md-3 col-sm-4 col-xs-12">
-					<a href="contact.html" class="theme-button-one float-right">Contact
+					<a href="loadTeam.html" class="theme-button-one float-right">Contact
 						us</a>
 				</div>
 			</div>

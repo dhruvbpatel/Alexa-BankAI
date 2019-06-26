@@ -22,7 +22,7 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="adminResources/images/favicon.png" />
 </head>
-
+	
 <body>
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper">

@@ -2,8 +2,8 @@
           <ul class="nav">
             <li class="nav-item nav-profile">
               <div class="nav-link">
-                <div class="profile-image">
-                  <img src="adminResources/images/fadmin.jpg" alt="image"/>
+                <div >
+                  <img src="adminResources/images/staff.png" style="padding-left:79px;" alt="image"/>
                   <span class="online-status online"></span> <!--change class online to offline or busy as needed-->
                 </div>
                 <div class="profile-name">
@@ -18,7 +18,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="staff/index.html">
+              <a class="nav-link" href="staff.html">
                 <i class="icon-rocket menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
                 

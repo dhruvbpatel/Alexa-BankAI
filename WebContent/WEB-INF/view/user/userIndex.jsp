@@ -68,8 +68,8 @@
 							<p class="wow fadeInUp animated">Inspire Your Business</p>
 							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Get Easy Loans</h1>
 							<h3 class="wow fadeInUp animated p-color" data-wow-delay="0.4s">Grow Together</h3>
-							<a href="#" class="wow fadeInLeft animated theme-button-one button-fill" data-wow-delay="0.6s">Get More</a>
-							<a href="contact.html" class="wow fadeInRight animated theme-button-one" data-wow-delay="0.6s">Contact us</a>
+							<a href="viewLoan1.html" class="wow fadeInLeft animated theme-button-one button-fill" data-wow-delay="0.6s">Get More</a>
+							<a href="loadUserTeam.html" class="wow fadeInRight animated theme-button-one" data-wow-delay="0.6s">Contact us</a>
 						</div> <!-- /.container -->
 					</div> <!-- /.camera_caption -->
 				</div>
@@ -79,8 +79,8 @@
 							<p class="wow fadeInUp animated">Inspire Your Business</p>
 							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Get Easy Loans</h1>
 							<h3 class="wow fadeInUp animated p-color" data-wow-delay="0.4s">Grow Together</h3>
-							<a href="#" class="wow fadeInLeft animated theme-button-one button-fill" data-wow-delay="0.6s">Get More</a>
-							<a href="contact.html" class="wow fadeInRight animated theme-button-one" data-wow-delay="0.6s">Contact us</a>
+							<a href="viewLoan1.html" class="wow fadeInLeft animated theme-button-one button-fill" data-wow-delay="0.6s">Get More</a>
+							<a href="loadUserTeam.html" class="wow fadeInRight animated theme-button-one" data-wow-delay="0.6s">Contact us</a>
 						</div> <!-- /.container -->
 					</div> <!-- /.camera_caption -->
 				</div>
@@ -90,8 +90,8 @@
 							<p class="wow fadeInUp animated">Inspire Your Business</p>
 							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Get Easy Loans</h1>
 							<h3 class="wow fadeInUp animated p-color" data-wow-delay="0.4s">Grow Together</h3>
-							<a href="#" class="wow fadeInLeft animated theme-button-one button-fill" data-wow-delay="0.6s">Get More</a>
-							<a href="contact.html" class="wow fadeInRight animated theme-button-one" data-wow-delay="0.6s">Contact us</a>
+							<a href="viewLoan1.html" class="wow fadeInLeft animated theme-button-one button-fill" data-wow-delay="0.6s">Get More</a>
+							<a href="loadUserTeam.html" class="wow fadeInRight animated theme-button-one" data-wow-delay="0.6s">Contact us</a>
 						</div> <!-- /.container -->
 					</div> <!-- /.camera_caption -->
 				</div>
