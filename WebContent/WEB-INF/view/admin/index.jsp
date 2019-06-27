@@ -270,7 +270,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+<!--           <div class="row">
             <div class="col-lg-4 d-flex flex-column">
               <div class="row flex-grow">
                 <div class="col-12 col-md-4 col-lg-12 grid-margin stretch-card">
@@ -378,7 +378,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- <div class="row grid-margin">
             <div class="col-12">
               <div class="card">

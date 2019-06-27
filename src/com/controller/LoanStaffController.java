@@ -62,7 +62,6 @@ public class LoanStaffController {
 	{
 		List ls=loanStaffDAO.search();
 		return new ModelAndView("admin/viewLoanStaff","loanStaff",ls);	
-
 	}
 	
 	

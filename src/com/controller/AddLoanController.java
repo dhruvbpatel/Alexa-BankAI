@@ -19,6 +19,7 @@ import com.DAO.LoanTypeDAO;
 import com.DAO.LoginDAO;
 import com.VO.AddLoanVO;
 import com.VO.LoanRateVO;
+import com.VO.LoanStaffVO;
 import com.VO.LoginVO;
 import com.util.BaseMethods;
 
@@ -106,14 +107,17 @@ public class AddLoanController {
 	}
 	
 	@RequestMapping(value="approvedDocuments.html",method=RequestMethod.GET)
-	public ModelAndView approvedDocuments(@RequestParam int id,@ModelAttribute AddLoanVO addLoanVO)
+	public ModelAndView approvedDocuments(@RequestParam int id,@ModelAttribute AddLoanVO addLoanVO,LoginVO loginVO,LoanStaffVO loanStaffVO)
 	{
 		addLoanVO.setId(id);
 		List ls = addLoanDAO.verifySearch(addLoanVO);
 		
 		AddLoanVO addLoanVO2 = (AddLoanVO)ls.get(0);
 		addLoanVO2.setStatus("APPROVED");
+		
 		this.addLoanDAO.insert(addLoanVO2);
+		
+		BaseMethods.sendConfirmationMail(loginVO.getEmail(), loanStaffVO.getFirstName());
 		
 		return new ModelAndView("redirect:/staffLoanRequest.html");	
 

@@ -20,7 +20,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="adminResources/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="adminResources/images/favicon.png" />
+  <link rel="shortcut icon" href="adminResources/images/AI.png" />
 </head>
 	
 <body>

@@ -111,19 +111,20 @@
 										<div class="image">
 										<img src="userResources/images/team/2.jpg" alt=""></div>
 										<div class="text">
-											<h6><a href="#">Dhruv Patel</a></h6>
+											<h6><a href="http://www.pateldhruv.in" target="_blank">Dhruv Patel</a></h6>
 											<p>Intern</p>
 											<ul class="social-icon">
 												<li><a href="https://www.facebook.com/profile.php?id=100003776960880" target="_blank" class="tran3s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 												<li><a href="https://twitter.com/dhruvhimself" target="_blank" class="tran3s"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 												<li><a href="mailto:dhruvpatel1057@gmail.com" target="_blank" class="tran3s"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+												<li><a href="http://dhruvbpatel.github.io" target="_blank" class="tran3s"><i class="fa fa-github" aria-hidden="true"></i></a></li>
 											</ul>
 										</div>
 									</div> <!-- /.single-team-member -->
 								</div> <!-- /.col- -->
 								<div class="col-sm-4 col-xs-6">
 									<div class="single-team-member">
-										<div class="image"><img src="userResources/images/team/3.jpg" alt=""></div>
+										<div class="image"><img src="userResources/images/team/s.jpg" alt=""></div>
 										<div class="text">
 											<h6><a href="#">Saurin Patel</a></h6>
 											<p>Intern</p>
@@ -161,7 +162,7 @@
 									<p>Softvan.in</p>
 								</div>
 								<div class="item">
-									<img src="userResources/images/home/5.jpg" alt="">
+									<img src="userResources/images/home/s.jpg" alt="">
 									<h6>Saurin Patel</h6>
 									<p>Softvan.in</p>
 								</div>
