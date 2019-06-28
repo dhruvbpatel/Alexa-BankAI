@@ -1,7 +1,9 @@
 package com.DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -40,6 +42,28 @@ public class FeedbackDAO {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public List feedBackCount() {
+		// TODO Auto-generated method stub
+		List ls = new ArrayList();
+		
+		try {
+			Session Session = sessionfactory.openSession();
+			Transaction transaction = Session.beginTransaction();
+				
+			Query q = Session.createSQLQuery("SELECT COUNT(Id) FROM `feedback_tbl`");
+			
+			ls=q.list();
+			transaction.commit();
+			Session.close();
+		
+		}catch (HibernateException hb) {
+
+			hb.printStackTrace();
+		}
+		
+		return ls;
 	}
 
 }

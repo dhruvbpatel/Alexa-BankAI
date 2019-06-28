@@ -1,7 +1,9 @@
 package com.DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -91,5 +93,49 @@ public List searchUserComplaint(){
 		Session.close();
 		return ls;
 	}
+
+
+public List complainCount() {
+	
+	List ls = new ArrayList();
+	try {
+		Session Session = sessionfactory.openSession();
+		Transaction transaction = Session.beginTransaction();
+			
+		Query q = Session.createSQLQuery("SELECT COUNT(Id) FROM complaint_tbl");
+		
+		ls=q.list();
+		transaction.commit();
+		Session.close();
+	
+	}catch (HibernateException hb) {
+
+		hb.printStackTrace();
+	}
+	
+	return ls;
+}
+
+
+public List pendingLoanCount() {
+	// TODO Auto-generated method stub
+	List ls = new ArrayList();
+	try {
+		Session Session = sessionfactory.openSession();
+		Transaction transaction = Session.beginTransaction();
+			
+		Query q = Session.createSQLQuery("SELECT COUNT(Id) FROM `complaint_tbl` WHERE STATUS='PENDING';");
+		
+		ls=q.list();
+		transaction.commit();
+		Session.close();
+	
+	}catch (HibernateException hb) {
+
+		hb.printStackTrace();
+	}
+	
+	return ls;
+}
 	
 }

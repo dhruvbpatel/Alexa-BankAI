@@ -5,6 +5,9 @@
 
 <base href="<%=request.getContextPath()%>/admin">
 <head>
+
+<script src="adminResources/js/highcharts.js"></script>
+<script src="adminResources/js/exporting.js"></script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -221,10 +224,10 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-md-center">
-                    <i class="mdi mdi-basket icon-lg text-success"></i>
-                    <div class="ml-3">
-                      <p class="mb-0">Daily Order</p>
-                      <h6>12569</h6>
+                    <img src="adminResources/images/approval.png"></img>
+                    <div class="ml-3"> 	
+                      <p class="mb-0">Approved Loans</p>
+                      <h6>${approvedLoanCount}</h6>
                     </div>
                   </div>
                 </div>
@@ -234,10 +237,10 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-md-center">
-                    <i class="mdi mdi-rocket icon-lg text-warning"></i>
+                    <img src="adminResources/images/feedback.png"></img>
                     <div class="ml-3">
-                      <p class="mb-0">Tasks Completed</p>
-                      <h6>2346</h6>
+                      <p class="mb-0">Feeback Count</p>
+                      <h6>${feedBackList }</h6>
                     </div>
                   </div>
                 </div>
@@ -247,10 +250,11 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-md-center">
-                    <i class="mdi mdi-diamond icon-lg text-info"></i>
+                    <!-- <i class="mdi mdi-diamond icon-lg text-info"></i> -->
+                    <img src="adminResources/images/complaint.png"></img>
                     <div class="ml-3">
-                      <p class="mb-0">Monthly Sales</p>
-                      <h6>896546</h6>
+                     <p class="mb-0">complaint count</p>
+                      <h6>${complainList }</h6>
                     </div>
                   </div>
                 </div>
@@ -260,10 +264,10 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-md-center">
-                    <i class="mdi mdi-chart-line-stacked icon-lg text-danger"></i>
+                    <img src="adminResources/images/pending.png"></img>
                     <div class="ml-3">
-                      <p class="mb-0">Total Revenue</p>
-                      <h6>$ 56000</h6>
+                      <p class="mb-0">Pending Complaint</p>
+                      <h6>${pendingLoanCount}</h6>
                     </div>
                   </div>
                 </div>
@@ -473,13 +477,28 @@
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h6 class="card-title">Monthly Analytics</h6>
+<!--                    <h6 class="card-title">Monthly Analytics</h6>
                   <p class="card-description">Products that are creating the most revenue and their sales throughout the year and the variation in behavior of sales.</p>
                   <div id="js-legend" class="chartjs-legend mt-4 mb-5"></div>
                   <div class="demo-chart">
-                    <canvas id="dashboard-monthly-analytics"></canvas>
-                  </div>
-                </div>
+                    <canvas id="dashboard-monthly-analytics"></canvas> 
+                  </div> -->
+                  <%@taglib prefix="c" uri = "http://java.sun.com/jstl/core_rt" %>
+                  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                  <c:forEach var="m" items="${graphList}" varStatus="l">
+                  
+                  <c:forEach var="i" items="${m}" varStatus="j">
+                  
+                  
+                  		<c:if test="${j.count eq 1}">
+                  			<input type="hidden" name="yvalue" value="${i}" />
+                  		</c:if>
+						<c:if test="${j.count eq 2}">
+							<input type="hidden" name="xvalue" value="${i}" />
+						</c:if>	
+					</c:forEach>
+					</c:forEach>
+                </div> 
               </div>
             </div>
           </div>
@@ -719,7 +738,7 @@
           </div> -->
 
 
-          <div class="row">
+         <!--  <div class="row">
             <div class="col-md-4 grid-margin">
               <div class="card">
                 <div class="card-body">
@@ -759,7 +778,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
        <!--    <div class="row">
             <div class="col-md-4 grid-margin">
               <div class="card">
@@ -817,6 +836,53 @@
   <!-- container-scroller -->
 
   <!-- plugins:js -->
+  <script>
+var xvalue= document.getElementsByName("xvalue");
+var xdata = [];
+var yvalue= document.getElementsByName("yvalue");
+var ydata = [];
+for(var i=0;i<xvalue.length;i++)
+{
+	xdata.push(xvalue[i].value);
+	ydata.push(parseFloat(yvalue[i].value));
+}
+Highcharts.chart({
+    chart: {
+	renderTo:"container",
+
+        type: 'column'
+    },
+    title: {
+        text: 'Number of Loans per User'
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: xdata,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Number of Loans'
+        }
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'No of Loans',
+        data: ydata
+
+    }]
+});
+</script>
+  
+  
   <script src="adminResources/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->

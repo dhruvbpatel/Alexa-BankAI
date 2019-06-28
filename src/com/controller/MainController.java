@@ -1,5 +1,7 @@
   package com.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,15 +14,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.DAO.AddLoanDAO;
+import com.DAO.ComplaintDAO;
+import com.DAO.FeedbackDAO;
 import com.DAO.LoginDAO;
 import com.VO.ComplaintVO;
 import com.VO.LoginVO;
+import com.util.BaseMethods;
 
 @Controller
 public class MainController 
 {
 	@Autowired
 	LoginDAO ldao;
+	@Autowired
+	ComplaintDAO complaintDAO;
+	@Autowired
+	FeedbackDAO feedBackDAO;
+	@Autowired
+	AddLoanDAO addLoanDAO;
+	
+	
 	
 	@RequestMapping(value = { "/", "index.html"}, method = RequestMethod.GET)
 	public ModelAndView index() {
@@ -37,19 +51,47 @@ public class MainController
 	@RequestMapping(value ="admin.html", method = RequestMethod.GET)
 	public ModelAndView index12(HttpSession session,@ModelAttribute LoginVO loginVO) {
 		System.out.println("admin");
+		List complainList = this.complaintDAO.complainCount();
 		
-	    
-		return new ModelAndView("admin/index");
+		List feedBackCountList = this.feedBackDAO.feedBackCount();
+		
+		List approvedLoanCount = this.addLoanDAO.approvedLoanCount();
+		
+		List pendingLoanCount = this .complaintDAO.pendingLoanCount();
+		
+		List graph  = this.addLoanDAO.graph();
+		System.out.println(graph.size());
+		return new ModelAndView("admin/index")
+				.addObject("complainList",complainList.get(0))
+				.addObject("feedBackList", feedBackCountList.get(0))
+				.addObject("approvedLoanCount", approvedLoanCount.get(0))
+				.addObject("pendingLoanCount",pendingLoanCount.get(0))
+				.addObject("graphList",graph);
 	}
 	
 	@RequestMapping(value ="staff.html", method = RequestMethod.GET)
 	public ModelAndView staff(HttpSession session,@ModelAttribute LoginVO loginVO) {
 		System.out.println("staff");
+		String name = BaseMethods.getUser(); 
+		List ls	=ldao.searchByName(name);
 		
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	    String name = auth.getName(); 
-	    
-		return new ModelAndView("staff/index");
+		loginVO = (LoginVO)ls.get(0);
+		List complainList = this.complaintDAO.complainCount();
+		
+		List feedBackCountList = this.feedBackDAO.feedBackCount();
+				
+		List pendingLoanCount = this .complaintDAO.pendingLoanCount();
+		
+		List approvedLoanCount = this.addLoanDAO.approvedLoanCount();
+		
+		List graph  = this.addLoanDAO.graph();
+		
+		return new ModelAndView("staff/index")
+				.addObject("complainList",complainList.get(0))
+				.addObject("feedBackList", feedBackCountList.get(0))
+				.addObject("pendingLoanCount",pendingLoanCount.get(0))
+				.addObject("approvedLoanCount", approvedLoanCount.get(0))
+				.addObject("graphList",graph);
 	}
 		
 	@RequestMapping(value = "user.html", method = RequestMethod.GET)
@@ -80,11 +122,7 @@ public class MainController
 		System.out.println("*****Successfully Loggedout******");
 		return("user/index");
 	}
-/*	@RequestMapping(value="index.html" , method=RequestMethod.GET)
-	public ModelAndView home()
-	{
-		return new ModelAndView("user/userIndex");
-	}*/
+
 	
 	@RequestMapping(value="loadTeam.html",method=RequestMethod.GET)
 	public ModelAndView loadAddComplient()
@@ -97,5 +135,6 @@ public class MainController
 	public ModelAndView loadUserTeam(){
 		return new ModelAndView("user/userTeam");
 	}
+	
 	
 }
