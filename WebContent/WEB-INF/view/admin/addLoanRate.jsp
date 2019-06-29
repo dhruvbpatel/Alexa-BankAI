@@ -239,7 +239,7 @@
 											</div>
 											<div class="form-group">
 												<label for="cemail">Loan Rate</label>
-												<f:input path="loanRate" class="form-control" type="number"
+												<f:input path="loanRate" class="form-control" 
 													placeholder="Enter Loan Rate" />
 
 											</div>

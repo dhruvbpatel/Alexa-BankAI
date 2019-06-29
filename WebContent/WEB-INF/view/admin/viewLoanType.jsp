@@ -219,7 +219,8 @@
                             <th>Serial #</th>
                             <th>Loan Type</th>
                             <th>Loan Description</th>
-                            <th>Action</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -233,6 +234,9 @@
                               		<button class="btn btn-outline-primary">
                               			<a href="editLoan.html?id=${i.id}">Edit</a>
                               		</button>
+                              		</td>
+                              		<td>
+                              		
                                		<button class="btn btn-outline-primary">
                                			<a href="deleteLoan.html?id=${i.id}">Delete</a>
                                		</button>
