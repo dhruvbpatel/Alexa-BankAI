@@ -20,7 +20,7 @@ public class LoanRateVO implements Serializable {
 	private int id;
 	
 	@Column(name="loanRate")
-	private int loanRate;
+	private float loanRate;
 	
 	@Column(name="loanRateDescription")
 	private String loanRateDescription;
@@ -36,11 +36,11 @@ public class LoanRateVO implements Serializable {
 		this.id = id;
 	}
 
-	public int getLoanRate() {
+	public float getLoanRate() {
 		return loanRate;
 	}
 
-	public void setLoanRate(int loanRate) {
+	public void setLoanRate(float loanRate) {
 		this.loanRate = loanRate;
 	}
 

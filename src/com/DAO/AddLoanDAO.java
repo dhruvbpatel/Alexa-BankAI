@@ -139,4 +139,22 @@ public List graph() {
 }
 
 
+public List searchOwnLoan(LoginVO loginVO){
+	
+	Session Session = sessionfactory.openSession();
+	Transaction transaction = Session.beginTransaction();
+		
+	Query q = Session.createQuery("from AddLoanVO where loginVO="+loginVO.getId());
+	
+	List ls=q.list();
+	transaction.commit();
+	Session.close();
+		
+	
+	return ls;
+}
+
+
+
+
 }

@@ -63,6 +63,24 @@ public class FeedbackController {
 
 	
 	}
+	@RequestMapping(value="viewAdminFeedback.html",method=RequestMethod.GET)
+	public ModelAndView viewAdminFeedback()
+	{
+		List ls=feedbackDAO.search();
+		
+		return new ModelAndView("admin/viewFeedback","feedback",ls);	
+
 	
+	}
+	
+	@RequestMapping(value="viewStaffFeedback.html",method=RequestMethod.GET)
+	public ModelAndView viewStaffFeedback()
+	{
+		List ls=feedbackDAO.search();
+		
+		return new ModelAndView("staff/viewFeedback","feedback",ls);	
+
+	
+	}
 }
 

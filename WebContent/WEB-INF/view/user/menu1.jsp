@@ -26,7 +26,8 @@
 									<li class="dropdown-holder"><a href="#" class="tran3s">Loans</a>
 										<ul class="sub-menu">
 											<li><a href="loadAddLoan.html">Apply for Loan</a></li>
-											<li><a href="viewLoan1.html">view loan</a></li>
+											<li><a href="viewLoan.html">Bank loan Details</a></li>
+											<li><a href="viewYourLoan.html">view Your loan</a></li>
 										
 											
 										</ul> 
@@ -60,6 +61,7 @@
 										
 									</li>  -->
 									<li><a href="loadUserTeam.html" class="tran3s">Our Team</a></li>
+										<li><a href="viewProfile.html" class="tran3s">View Profile</a></li>
 									<li class="quote"><a href="j_spring_security_logout" class="tran3s">Logout</a></li>
 								</ul>
 						   </div><!-- /.navbar-collapse -->

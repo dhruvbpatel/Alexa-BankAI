@@ -117,10 +117,15 @@ public class AddLoanController {
 		
 		this.addLoanDAO.insert(addLoanVO2);
 		
-		BaseMethods.sendConfirmationMail(loginVO.getEmail(), loanStaffVO.getFirstName());
+		String data = "YOUR LOAN IS APPROOVED BY OUR STAFF , PLEASE VISIT TO OUR NEAREST BRANCH FOR FURTHER FORMALITIES.";
+		
+		BaseMethods.sendUpdateMail(addLoanVO2.getLoginVO().getEmail(), data);
+		
+		this.addLoanDAO.insert(addLoanVO2);
+	
 		
 		return new ModelAndView("redirect:/staffLoanRequest.html");	
-
+		
 	}
 	
 	@RequestMapping(value="rejectDocuments.html",method=RequestMethod.GET)
@@ -134,9 +139,13 @@ public class AddLoanController {
 		
 		this.addLoanDAO.insert(addLoanVO2);
 		
+		String data = "YOUR LOAN IS REJECTED BY OUR STAFF .";
+		
+		BaseMethods.sendUpdateMail(addLoanVO2.getLoginVO().getEmail(), data);
+		
 		return new ModelAndView("redirect:/staffLoanRequest.html");	
 
-	}
+	}	
 	
 
 	@RequestMapping(value="adminViewLoanRequest.html",method=RequestMethod.GET)
@@ -163,7 +172,17 @@ public class AddLoanController {
 	}
 	
 	
-	
+	@RequestMapping(value="viewYourLoan.html",method=RequestMethod.GET)
+	public ModelAndView viewYourLoan(@ModelAttribute LoanRateVO loanRateVO)
+	{
+		String name = BaseMethods.getUser(); 
+		List ls	=loginDAO.searchByName(name);
+		
+		LoginVO loginVO = (LoginVO)ls.get(0);
+		
+		List ls1=addLoanDAO.searchOwnLoan(loginVO);
+		return new ModelAndView("user/viewLoanRequest2","viewLoan",ls1);	
+	}
 	
 	
 }

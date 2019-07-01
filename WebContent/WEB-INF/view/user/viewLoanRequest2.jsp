@@ -11,7 +11,7 @@
 		<!-- For Resposive Device -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-				<title>BankAI -Automated Loan Application System</title>
+		<title>BankAI -Automated Loan Application System</title>
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
@@ -86,15 +86,27 @@
 
 			<%@taglib prefix="f" uri="http://java.sun.com/jstl/core_rt" %>
 						
-				<f:forEach items="${loanRequest}" var="i" >		
-						<div class="col-md-4 col-sm-6 col-xs-12">
+				<f:forEach items="${viewLoan}" var="i" >		
+						<div class="col-lg-9 col-md-8 col-xs-12">
 							<div class="single-service">
 								<div class="image"><img src="images/service/1.jpg" alt=""></div>
 								
 								<div class="text">
-									<h4><a href="service-details.html">${i.loanTypeId.loanType}</a> <i class="flaticon-pie-chart"></i></h4>
-									<p>Loan Rate:-${i.loanRate}</p>
-									<p>Loan Description:-${i.loanTypeId.loanTypeDescription}</p>
+									<h4><a href="#">${i.loanTypeVO.loanType}</a> <i class="flaticon-pie-chart"></i></h4>
+									<p>Loan Rate:-${i.loanRateVO.loanRate}</p>
+									
+									<p>Loan Amount :-${i.loanAmount}</p>
+									<p>Loan Description:-${i.loanDescription}</p>
+									<br>
+									<f:if test="${i.status eq 'APPROVED' }">
+												<a href="#" class="author" style="color: green;">${i.status}</a>
+									</f:if>
+									<f:if test="${i.status eq 'UNDER REVIEWED'}">
+												 <a href="#" class="author" style="color: blue;">${i.status}</a> 
+									</f:if>
+									<f:if test="${i.status eq 'REJECT'}">
+												 <a href="#" class="author" style="color: red;">${i.status}</a> 
+									</f:if>
 								</div> <!-- /.text -->
 							</div> <!-- /.single-service -->
 							

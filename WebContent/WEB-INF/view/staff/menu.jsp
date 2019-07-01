@@ -150,7 +150,7 @@
               </a>
               <div class="collapse" id="form-elements">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"><a class="nav-link" href="viewFeedback.html">View Feedback</a></li>
+                  <li class="nav-item"><a class="nav-link" href="viewStaffFeedback.html">View Feedback</a></li>
                   
                 </ul>
               </div>

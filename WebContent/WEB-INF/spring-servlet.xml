@@ -33,6 +33,7 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
        		 <value>com.VO.LoanTypeVO</value>
        		  <value>com.VO.FeedbackVO</value>
        		  <value>com.VO.AddLoanVO</value>
+       		  <value>com.VO.UserProfileVO</value>
 			</list>
         </property>
         <property name="hibernateProperties">
