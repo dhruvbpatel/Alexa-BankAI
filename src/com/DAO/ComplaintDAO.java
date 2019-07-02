@@ -102,7 +102,7 @@ public List complainCount() {
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
 			
-		Query q = Session.createSQLQuery("SELECT COUNT(Id) FROM complaint_tbl");
+		Query q = Session.createSQLQuery("SELECT COUNT(Id) FROM Complaint_tbl");
 		
 		ls=q.list();
 		transaction.commit();
@@ -124,7 +124,7 @@ public List pendingLoanCount() {
 		Session Session = sessionfactory.openSession();
 		Transaction transaction = Session.beginTransaction();
 			
-		Query q = Session.createSQLQuery("SELECT COUNT(Id) FROM `complaint_tbl` WHERE STATUS='PENDING';");
+		Query q = Session.createSQLQuery("SELECT COUNT(Id) FROM `Complaint_tbl` WHERE STATUS='PENDING';");
 		
 		ls=q.list();
 		transaction.commit();

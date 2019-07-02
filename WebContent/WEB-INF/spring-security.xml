@@ -43,9 +43,9 @@
  
  	<beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <beans:property name="url" value="jdbc:mysql://localhost/alexa"/> <!-- ?CreateDatabaseIfNotExist=True -->
-        <beans:property name="username" value="root"/>
-        <beans:property name="password" value="root"/>
+        <beans:property name="url" value="jdbc:mysql://demo.cg7jpwwgfuhy.us-east-1.rds.amazonaws.com/alexa"/> <!-- ?CreateDatabaseIfNotExist=True -->
+        <beans:property name="username" value="Sau211099rin"/>
+        <beans:property name="password" value="Sau211099rin"/>
     </beans:bean>
     
  	<beans:bean id="Handler" class="com.controller.Handler"></beans:bean> <!-- must create Handler -->
