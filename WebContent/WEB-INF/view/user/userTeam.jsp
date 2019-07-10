@@ -94,7 +94,7 @@
 							<div class="row">
 								<div class="col-sm-4 col-xs-6">	
 									<div class="single-team-member">
-										<div class="image"><img src="userResources/images/team/1.jpg" alt=""></div>
+										<div class="image"><img src="userResources/images/team/v.jpg" alt=""></div>
 										<div class="text">
 											<h6><a href="#">Vedant Patel</a></h6>
 											<p>Intern</p>
@@ -151,7 +151,7 @@
 
 							<div class="sidebar-partner-slider">
 								<div class="item">
-									<img src="userResources/images/home/4.jpg" alt="">
+									<img src="userResources/images/home/v.jpg" alt="">
 									<h6>Vedant Patel</h6>
 									<p>Softvan.in</p>
 								</div>
